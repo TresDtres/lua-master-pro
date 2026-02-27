@@ -1,0 +1,59 @@
+---
+title: "Mes 6: Inteligencia Artificial de NPCs"
+duration: "4 semanas · ~60 horas"
+phase: "Fase II: Intermedio"
+objectives:
+  - "Entender el sistema de IA de UE5 (Behavior Trees, Blackboard) e integrarlo con Lua"
+  - "Implementar máquinas de estado finitas (FSM) para comportamiento de NPCs en Lua puro"
+  - "Crear un sistema de percepción (visión, sonido) controlado desde Lua"
+  - "Diseñar comportamientos de combate básico y pathfinding assistido"
+  - "Optimizar scripts de IA para múltiples NPCs simultáneos"
+deliverable: "Demo 'Smart Guards': escenario de sigilo con 5 guardias con IA completa (patrulla, persecución, alerta, búsqueda) implementada enteramente en Lua."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { BrainCircuit } from "lucide-react"
+
+# Introducción
+
+La Inteligencia Artificial es lo que da vida a tus mundos. En este mes, aprenderás a crear NPCs que no solo se mueven, sino que "piensan". Combinaremos la potencia de los Behavior Trees de Unreal Engine con la flexibilidad de Lua para lógica de decisión, creando enemigos desafiantes y creíbles.
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>FSM en Lua — states, transitions, guards; NPC con 4 estados (idle, patrol, alert, chase)</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Percepción — raycasts desde Lua, cone de visión, rango de escucha</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>Behavior Trees + Lua — BTTasks y BTDecorators implementados en Lua via UnLua</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Combate básico — sistema de ataque/defensa, flee behavior, grupo de NPCs coordinado</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <BrainCircuit className="h-4 w-4" />
+  <AlertTitle>Demo 'Smart Guards'</AlertTitle>
+  <AlertDescription>
+    Escenario de sigilo con 5 guardias con IA completa (patrulla, persecución, alerta, búsqueda) implementada enteramente en Lua.
+  </AlertDescription>
+</Alert>

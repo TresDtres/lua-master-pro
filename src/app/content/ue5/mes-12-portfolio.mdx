@@ -1,0 +1,86 @@
+---
+title: "Mes 12: Portfolio, Documentación y Comunidad"
+duration: "4 semanas · ~60 horas"
+phase: "Fase IV: Maestría"
+objectives:
+  - "Crear una librería personal de módulos Lua reutilizables (tu 'Lua Toolkit para UE5')"
+  - "Documentar el código con EmmyLua annotations para autocompletado en VS Code"
+  - "Escribir un post técnico sobre arquitectura Lua en UE5 (blog, dev.to, GameDev.net)"
+  - "Contribuir a un proyecto open source o crear un plugin público en GitHub"
+  - "Preparar el portfolio con casos de estudio detallados para cada proyecto del plan"
+deliverable: "Portfolio profesional completo: 5 proyectos documentados, librería Lua open source con README completo, artículo técnico publicado, juego publicado en itch.io."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { CodeSnippet } from "@/components/ui/CodeSnippet"
+import { Briefcase } from "lucide-react"
+import { Quiz } from "@/components/mdx/Quiz"
+
+# Introducción
+
+¡Felicidades! Has llegado al final del camino. Pero saber programar no es suficiente; necesitas demostrarlo. Este mes no se trata de aprender nueva sintaxis, sino de empaquetar todo lo que has hecho en un producto profesional: TÚ. Convertirás tu código "spaghetti" de aprendizaje en librerías reutilizables y tu experiencia en artículos que ayuden a otros.
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>Lua Toolkit — refactorizar los mejores módulos del año en una librería reutilizable</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Documentación — EmmyLua annotations completas, README detallados, wiki interna</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>Contenido público — artículo técnico, vídeo devlog, release público en itch.io/GitHub</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Portfolio final — página web o PDF con 5 proyectos documentados + código de GitHub</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <Briefcase className="h-4 w-4" />
+  <AlertTitle>Portfolio Profesional Completo</AlertTitle>
+  <AlertDescription>
+    5 proyectos documentados, librería Lua open source con README completo, artículo técnico publicado, juego publicado en itch.io.
+  </AlertDescription>
+</Alert>
+
+## Quiz Final de Repaso
+
+<Quiz
+  questions={[
+    {
+      text: "¿Cuál es la principal ventaja de usar Lua en UE5 frente a Blueprints puros?",
+      options: ["Mayor rendimiento gráfico", "Mejor gestión de estructuras de datos complejas y lógica de texto", "No requiere compilar C++", "Es el lenguaje nativo de Epic Games"],
+      correctAnswer: 1,
+      explanation: "Aunque Lua no requiere compilación (punto 3), su mayor ventaja arquitectónica sobre BP es la facilidad para manejar tablas, strings y lógica compleja sin el 'spaghetti' visual."
+    },
+    {
+      text: "¿Qué herramienta se usa para generar documentación y autocompletado en Lua?",
+      options: ["LuaDoc", "EmmyLua", "Doxygen", "JSDoc"],
+      correctAnswer: 1,
+      explanation: "EmmyLua es el estándar actual para anotar tipos y generar intellisense en editores como VS Code o IntelliJ."
+    },
+    {
+      text: "¿Qué patrón de diseño es ideal para desacoplar sistemas en Lua?",
+      options: ["Singleton", "Observer / Event Bus", "Factory", "Decorator"],
+      correctAnswer: 1,
+      explanation: "Un Event Bus permite que sistemas dispares (UI, Audio, Gameplay) se comuniquen sin referenciarse directamente, facilitando la modularidad."
+    }
+  ]}
+/>

@@ -1,0 +1,59 @@
+---
+title: "Mes 4: Sistemas de Juego: Inventario y Stats"
+duration: "4 semanas · ~60 horas"
+phase: "Fase II: Intermedio"
+objectives:
+  - "Diseñar una arquitectura de datos limpia en Lua para sistemas de juego"
+  - "Implementar un sistema de inventario completo (items, stack, drag-drop conceptual)"
+  - "Crear un sistema de estadísticas de personaje (HP, mana, stamina, atributos)"
+  - "Integrar persistencia de datos con UE5 SaveGame desde Lua"
+  - "Aprender patrones de diseño aplicados a Lua: Observer, State, Command"
+deliverable: "Sistema RPG Base: inventario de 20 slots, 6 estadísticas de personaje, guardado/cargado de partida. Todo gestionado por módulos Lua reutilizables."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Database } from "lucide-react"
+
+# Introducción
+
+En la Fase II, dejamos atrás los fundamentos para construir sistemas reales. Este mes es crucial: aprenderás a estructurar datos complejos. Un juego no es solo código moviendo cubos; es gestión de estado, inventarios y persistencia.
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>Arquitectura de datos — DataAssets, DataTables de UE5 accedidos desde Lua</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Sistema de inventario — Item class, contenedores, reglas de negocio en Lua</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>Sistema de stats — cálculos, modificadores, buffs/debuffs con metatables</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>SaveGame — serializar/deserializar estado de juego en Lua, guardado automático</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <Database className="h-4 w-4" />
+  <AlertTitle>Sistema RPG Base</AlertTitle>
+  <AlertDescription>
+    Inventario de 20 slots, 6 estadísticas de personaje, guardado/cargado de partida. Todo gestionado por módulos Lua reutilizables.
+  </AlertDescription>
+</Alert>

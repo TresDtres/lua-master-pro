@@ -1,0 +1,26 @@
+# GitHub CODEOWNERS
+# Defines who is responsible for code review
+
+# Default owners for everything in the repo
+* @tu-usuario
+
+# Core application code
+/src/app/** @tu-usuario
+/src/components/** @tu-usuario
+/src/hooks/** @tu-usuario
+/src/lib/** @tu-usuario
+
+# Lesson content
+/src/lib/lessons/** @tu-usuario
+
+# Configuration files
+package.json @tu-usuario
+tsconfig.json @tu-usuario
+next.config.ts @tu-usuario
+
+# Documentation
+*.md @tu-usuario
+/docs/** @tu-usuario
+
+# GitHub configuration
+/.github/** @tu-usuario

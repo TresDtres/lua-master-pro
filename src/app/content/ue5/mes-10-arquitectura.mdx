@@ -1,0 +1,60 @@
+---
+title: "Mes 10: Arquitectura de Proyecto Real y Diseño de Sistemas"
+duration: "4 semanas · ~60 horas"
+phase: "Fase IV: Maestría"
+objectives:
+  - "Diseñar la arquitectura completa del juego final usando patrones probados en producción"
+  - "Implementar un Game Framework robusto en Lua (GameMode, GameState, PlayerState)"
+  - "Crear un sistema de configuración y balance de juego data-driven desde Lua"
+  - "Diseñar y documentar APIs internas para sistemas Lua reutilizables"
+  - "Aplicar TDD (Test Driven Development) básico a módulos Lua críticos"
+deliverable: "Documento de Arquitectura del Juego Final + Game Framework funcional en Lua con al menos 3 sistemas core integrados y con tests automatizados."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { CodeSnippet } from "@/components/ui/CodeSnippet"
+import { Layers } from "lucide-react"
+
+# Introducción
+
+Bienvenido a la Fase IV. Aquí dejamos de hacer "scripts sueltos" para convertirnos en Arquitectos de Software. Antes de escribir una sola línea de gameplay del proyecto final, definiremos los cimientos. Aprenderás a estructurar un proyecto para que sea escalable, mantenible y testearlo automáticamente.
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>Diseño del juego final — GDD simplificado, lista de sistemas necesarios, scope</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Game Framework Lua — GameMode, flow de sesiones, transiciones entre niveles</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>Data-driven design — JSON/CSV como fuente de verdad para balance; hot-reload en dev</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Testing — framework de tests unitarios para Lua, integración con CI básico</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <Layers className="h-4 w-4" />
+  <AlertTitle>Arquitectura y Framework</AlertTitle>
+  <AlertDescription>
+    Documento de Arquitectura del Juego Final + Game Framework funcional en Lua con al menos 3 sistemas core integrados y con tests automatizados.
+  </AlertDescription>
+</Alert>

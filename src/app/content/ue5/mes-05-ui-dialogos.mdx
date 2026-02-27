@@ -1,0 +1,59 @@
+---
+title: "Mes 5: Sistema de Diálogos e Interfaz de Usuario"
+duration: "4 semanas · ~60 horas"
+phase: "Fase II: Intermedio"
+objectives:
+  - "Crear y controlar widgets UMG de UE5 desde scripts Lua"
+  - "Diseñar un sistema de diálogos con árbol de conversación no lineal"
+  - "Implementar localización básica de textos controlada desde Lua"
+  - "Integrar animaciones de UI (fade, slide, scale) activadas desde Lua"
+  - "Construir un HUD dinámico conectado al sistema de stats del Mes 4"
+deliverable: "Demo 'Story Engine': NPC con 15+ líneas de diálogo ramificado, HUD funcional conectado a stats del jugador, sistema de notificaciones. Todo controlado por Lua."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { MessageSquare } from "lucide-react"
+
+# Introducción
+
+Una buena interfaz es invisible hasta que la necesitas. En este mes, aprenderás a dominar UMG (Unreal Motion Graphics) usando Lua como cerebro. Crearemos sistemas de diálogo complejos que serían una pesadilla en Blueprints puros, aprovechando la facilidad de Lua para manejar tablas y strings.
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>UMG desde Lua — crear widgets, bindear datos, mostrar/ocultar</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Sistema de diálogos — estructura JSON/tabla de conversación, parser en Lua</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>HUD completo — barras de vida/mana, minimapa, notifications Lua-driven</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Polish UI — transiciones, animaciones, feedback visual, accesibilidad básica</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <MessageSquare className="h-4 w-4" />
+  <AlertTitle>Demo 'Story Engine'</AlertTitle>
+  <AlertDescription>
+    NPC con 15+ líneas de diálogo ramificado, HUD funcional conectado a stats del jugador, sistema de notificaciones. Todo controlado por Lua.
+  </AlertDescription>
+</Alert>

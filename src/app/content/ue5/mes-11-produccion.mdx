@@ -1,0 +1,60 @@
+---
+title: "Mes 11: Producción del Juego Final"
+duration: "4 semanas · ~60 horas"
+phase: "Fase IV: Maestría"
+objectives:
+  - "Construir el juego completo integrando todos los sistemas aprendidos"
+  - "Aplicar polish de gameplay: juice, game feel, feedback visual y sonoro"
+  - "Implementar menú principal, opciones, pausa y pantalla de game over"
+  - "Realizar playtesting y ajustar balance de juego desde datos Lua"
+  - "Optimizar para un target de 60fps estable en hardware de gama media"
+deliverable: "Juego Completo Alpha: vertical slice jugable con inicio-medio-fin, publicado en itch.io o similar para feedback externo."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { CodeSnippet } from "@/components/ui/CodeSnippet"
+import { Hammer } from "lucide-react"
+
+# Introducción
+
+Es hora de unir todas las piezas. En este mes, dejarás de crear sistemas aislados para construir una experiencia cohesiva. El foco cambia de "programación" a "producción": cerrar features, pulir la experiencia de usuario (UX), eliminar bugs y asegurar que el juego sea divertido y estable.
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>Construcción core loop — mecánica principal jugable de principio a fin</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Contenido — al menos 3 niveles, 3 tipos de enemigos, 5 armas/habilidades</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>Menus y UX — flujo completo de UI, settings, save/load, localización EN/ES</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Polish y optimización — particle effects, audio, profiling final, bug fixing</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <Hammer className="h-4 w-4" />
+  <AlertTitle>Juego Completo Alpha</AlertTitle>
+  <AlertDescription>
+    Vertical slice jugable con inicio-medio-fin, publicado en itch.io o similar para feedback externo.
+  </AlertDescription>
+</Alert>

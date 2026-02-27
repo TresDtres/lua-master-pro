@@ -1,0 +1,60 @@
+---
+title: "Mes 8: Optimización y Herramientas de Editor"
+duration: "4 semanas · ~60 horas"
+phase: "Fase III: Avanzado"
+objectives:
+  - "Profiling de scripts Lua con Unreal Insights y lua-profiler"
+  - "Técnicas de optimización: pooling de objetos, lazy evaluation, caching en Lua"
+  - "Crear Custom Editor Tools y ventanas de editor con UE5 Slate API desde Lua"
+  - "Automatizar tareas del pipeline de arte y diseño con scripts Lua de editor"
+  - "Implementar hot-reload de scripts Lua en tiempo real durante el desarrollo"
+deliverable: "Toolkit de editor: 3 herramientas custom (generador de niveles procedural, validador de assets, batch renamer) implementadas como plugins Lua de editor."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { CodeSnippet } from "@/components/ui/CodeSnippet"
+import { Wrench } from "lucide-react"
+
+# Introducción
+
+Un juego no solo debe funcionar, debe funcionar *bien*. En este mes, nos ponemos el sombrero de Technical Artist/Programmer. Aprenderás a encontrar cuellos de botella en tu código Lua y a extender el propio editor de Unreal Engine para mejorar la vida de tu equipo.
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>Profiling — Unreal Insights, identificar bottlenecks en Lua, métricas de frame</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Optimización — object pooling, coroutines con UE5 tasks, memory management</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>Editor Tools — ventanas custom, property editors, batch operations desde Lua</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Pipeline automation — importar assets, generar DataTables, batch testing con Lua</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <Wrench className="h-4 w-4" />
+  <AlertTitle>Toolkit de Editor</AlertTitle>
+  <AlertDescription>
+    3 herramientas custom (generador de niveles procedural, validador de assets, batch renamer) implementadas como plugins Lua de editor.
+  </AlertDescription>
+</Alert>

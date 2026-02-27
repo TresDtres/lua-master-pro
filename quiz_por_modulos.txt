@@ -1,0 +1,829 @@
+### Módulo 1: Lua desde Cero
+
+#### Pregunta 1 (Lección 1.1: Introducción a Lua)
+¿Qué es Lua?  
+1. Un paisaje natural  
+2. La luna  
+3. Un lenguaje de scripting multipropósito  
+4. Un sistema operativo  
+
+**Opción correcta:** 3  
+**Explicación:** Lua es un lenguaje de programación ligero, embeddable y eficiente, creado en 1993, usado en juegos como World of Warcraft y herramientas como Redis.  
+**Si error:** Repasar Lección 1.1 del Módulo 1.
+
+#### Pregunta 2 (Lección 1.2: Variables y Tipos)
+¿Qué diferencia hay entre variables locales y globales en Lua?  
+1. Las locales son visibles en todo el script, las globales solo en funciones.  
+2. Las locales se declaran con "local" y son de ámbito limitado, las globales son accesibles en todo el programa.  
+3. Ambas son iguales, solo cambia el nombre.  
+4. Las globales requieren "global" para declararse.  
+
+**Opción correcta:** 2  
+**Explicación:** Las variables locales (con "local") optimizan el rendimiento y evitan colisiones; Lua tiene 8 tipos: nil, boolean, number, string, userdata, function, thread y table.  
+**Si error:** Repasar Lección 1.2 del Módulo 1.
+
+#### Pregunta 3 (Lección 1.3: Operadores)
+¿Qué resultado da el operador lógico "and" en Lua si ambos operandos son true?  
+1. False.  
+2. El segundo operando.  
+3. Nil.  
+4. Error.  
+
+**Opción correcta:** 2  
+**Explicación:** Operadores aritméticos como +, -, *; relacionales >, <, ==; lógicos and (corto-circuito), or, not. "and" devuelve el segundo si ambos verdadeños.  
+**Si error:** Repasar Lección 1.3 del Módulo 1.
+
+#### Pregunta 4 (Lección 1.4: Strings)
+¿Cómo se concatena strings en Lua?  
+1. Con +.  
+2. Con .. (doble punto).  
+3. Con &.  
+4. Con ,.  
+
+**Opción correcta:** 2  
+**Explicación:** Strings inmutables; métodos como string.upper(), string.format("%s", var) para formatting; escape con \.  
+**Si error:** Repasar Lección 1.4 del Módulo 1.
+
+#### Pregunta 5 (Lección 1.5: Condicionales)
+¿Qué hace este código?  
+```lua
+if x > 10 then print("Mayor") elseif x < 10 then print("Menor") else print("Igual") end  
+```  
+1. Imprime siempre "Igual".  
+2. Evalúa si x es mayor, menor o igual a 10 e imprime el resultado.  
+3. Crea un bucle infinito.  
+4. Concatena strings.  
+
+**Opción correcta:** 2  
+**Explicación:** Las condicionales if/elseif/else permiten ramificaciones lógicas; Lua no tiene operador ternario nativo, pero se simula con "and/or".  
+**Si error:** Repasar Lección 1.5 del Módulo 1.
+
+#### Pregunta 6 (Lección 1.6: Bucles)
+¿Cuál bucle en Lua se ejecuta al menos una vez?  
+1. for.  
+2. while.  
+3. repeat-until.  
+4. Ninguno.  
+
+**Opción correcta:** 3  
+**Explicación:** for numérico/generico, while pre-condición, repeat-until post-condición; break para salir temprano.  
+**Si error:** Repasar Lección 1.6 del Módulo 1.
+
+#### Pregunta 7 (Lección 1.7: Funciones)
+¿Qué son closures en Lua?  
+1. Funciones sin parámetros.  
+2. Funciones que capturan variables del ámbito exterior.  
+3. Bucles.  
+4. Strings.  
+
+**Opción correcta:** 2  
+**Explicación:** Funciones con parámetros variables (...), múltiples retornos; anónimas para callbacks.  
+**Si error:** Repasar Lección 1.7 del Módulo 1.
+
+### Módulo 2: POO + UE5
+
+#### Pregunta 1 (Lección 2.1: Tablas Avanzadas)
+¿Qué representa una tabla en Lua?  
+1. Solo un array numérico.  
+2. Puede ser array (índices numéricos) o diccionario (claves arbitrarias), y se itera con ipairs o pairs.  
+3. Una función.  
+4. Un tipo de string.  
+
+**Opción correcta:** 2  
+**Explicación:** Las tablas son el único tipo de datos estructurado en Lua, permitiendo arrays, objetos y más mediante índices y claves.  
+**Si error:** Repasar Lección 2.1 del Módulo 2.
+
+#### Pregunta 2 (Lección 2.2: Metatables)
+¿Qué hace el metamétodo __index?  
+1. Borra elementos.  
+2. Se llama cuando se accede a una clave inexistente en una tabla.  
+3. Añade elementos.  
+4. Iteración.  
+
+**Opción correcta:** 2  
+**Explicación:** Metatables controlan comportamiento; __newindex para asignaciones, otros como __add para operadores.  
+**Si error:** Repasar Lección 2.2 del Módulo 2.
+
+#### Pregunta 3 (Lección 2.3: POO en Lua)
+¿Cómo se simula una clase en Lua usando metatables?  
+1. Con la palabra clave "class".  
+2. Usando tablas como prototipos y metamétodos como __index para herencia.  
+3. Solo con funciones.  
+4. No se puede, Lua no soporta POO.  
+
+**Opción correcta:** 2  
+**Explicación:** La POO en Lua es prototipada: herencia vía __index, polimorfismo sobrescribiendo métodos, sin clases nativas.  
+**Si error:** Repasar Lección 2.3 del Módulo 2.
+
+#### Pregunta 4 (Lección 2.4: UnLua Setup)
+¿Qué es UnLua?  
+1. Un lenguaje nuevo.  
+2. Plugin para integrar Lua en Unreal Engine 5, con instalación vía marketplace y configuración en project settings.  
+3. Una tabla.  
+4. Un operador.  
+
+**Opción correcta:** 2  
+**Explicación:** Setup incluye binding Lua a actors; primer script simple como print("Hello UnLua").  
+**Si error:** Repasar Lección 2.4 del Módulo 2.
+
+#### Pregunta 5 (Lección 2.5: Ciclo de Vida)
+¿Qué evento se llama cada frame en UnLua para UE5?  
+1. BeginPlay.  
+2. Tick.  
+3. EndPlay.  
+4. Setup.  
+
+**Opción correcta:** 2  
+**Explicación:** Tick se ejecuta por frame para actualizaciones continuas; BeginPlay al inicio, EndPlay al fin del actor.  
+**Si error:** Repasar Lección 2.5 del Módulo 2.
+
+#### Pregunta 6 (Lección 2.6: Interacción UE5)
+¿Cómo mueves un actor en Lua con UnLua?  
+1. Con print.  
+2. Accediendo a su Location y usando SetActorLocation.  
+3. Solo en BP.  
+4. Con strings.  
+
+**Opción correcta:** 2  
+**Explicación:** Interacción incluye cambiar materiales vía SetMaterial, o mover con vectores FVector.  
+**Si error:** Repasar Lección 2.6 del Módulo 2.
+
+### Módulo 3: Blueprints ↔ Lua
+
+#### Pregunta 1 (Lección 3.1: Binding BP-Lua)
+¿Cómo exportas una función de Blueprint a Lua?  
+1. Con UPROPERTY.  
+2. Usando UFUNCTION(BlueprintCallable) en C++ o BP.  
+3. Solo en Lua.  
+4. Con metatables.  
+
+**Opción correcta:** 2  
+**Explicación:** UFUNCTION permite binding; en UnLua, se accede desde Lua para integración híbrida.  
+**Si error:** Repasar Lección 3.1 del Módulo 3.
+
+#### Pregunta 2 (Lección 3.2: Input System)
+¿Qué es Enhanced Input en UE5?  
+1. Un sistema básico de teclado.  
+2. Un framework avanzado para bindings de input, mapeo de acciones y contextos.  
+3. Solo para mouse.  
+4. Parte de Lua nativa.  
+
+**Opción correcta:** 2  
+**Explicación:** Permite bindings dinámicos; en UnLua, se integra para controlar actores vía input.  
+**Si error:** Repasar Lección 3.2 del Módulo 3.
+
+#### Pregunta 3 (Lección 3.3: Delegates)
+¿Qué son delegates en UE5?  
+1. Bucles.  
+2. Eventos y dispatchers para callbacks, bindables en Lua.  
+3. Tablas.  
+4. Strings.  
+
+**Opción correcta:** 2  
+**Explicación:** Delegates para eventos multicast; útiles para notificaciones entre BP y Lua.  
+**Si error:** Repasar Lección 3.3 del Módulo 3.
+
+#### Pregunta 4 (Lección 3.4: Comunicación)
+¿Cómo llamas una función de Lua desde Blueprint?  
+1. Directamente con print.  
+2. Usando delegates o llamando scripts UnLua expuestos.  
+3. Solo de BP a Lua.  
+4. Con JSON.  
+
+**Opción correcta:** 2  
+**Explicación:** Comunicación bidireccional vía functions exportadas o events; acelera desarrollo híbrido.  
+**Si error:** Repasar Lección 3.4 del Módulo 3.
+
+#### Pregunta 5 (Lección 3.5: Componentes)
+¿Cómo accedes a un componente de un actor en Lua?  
+1. Con globales.  
+2. Usando GetComponentByClass o FindComponentByClass.  
+3. Solo en editor.  
+4. Con bucles.  
+
+**Opción correcta:** 2  
+**Explicación:** Componentes como Mesh o Collision; en UnLua, se manipulan para funcionalidades específicas.  
+**Si error:** Repasar Lección 3.5 del Módulo 3.
+
+#### Pregunta 6 (Lección 3.6: Proyecto)
+¿Qué implica un personaje controlado por Lua?  
+1. Solo visual.  
+2. Integrar input, movimiento y interacciones vía UnLua scripts.  
+3. Sin código.  
+4. Solo BP.  
+
+**Opción correcta:** 2  
+**Explicación:** Proyecto une binding, input y componentes para un personaje jugable.  
+**Si error:** Repasar Lección 3.6 del Módulo 3.
+
+### Módulo 4: Inventario y Stats
+
+#### Pregunta 1 (Lección 4.1: DataTables)
+¿Qué es una DataTable en UE5?  
+1. Una tabla Lua simple.  
+2. Una estructura de datos para cargar info desde CSV/JSON, accesible en Lua.  
+3. Un bucle.  
+4. Un widget UI.  
+
+**Opción correcta:** 2  
+**Explicación:** DataTables permiten diseño data-driven; en Lua, se cargan para items o stats.  
+**Si error:** Repasar Lección 4.1 del Módulo 4.
+
+#### Pregunta 2 (Lección 4.2: Sistema de Inventario)
+¿Cómo manejas items en un inventario Lua?  
+1. Solo con strings.  
+2. Usando tablas para slots, items con propiedades como stack y tipo.  
+3. Con funciones globales.  
+4. Sin tablas.  
+
+**Opción correcta:** 2  
+**Explicación:** Inventario como array de slots; items como tablas con ID, cantidad, para stacking.  
+**Si error:** Repasar Lección 4.2 del Módulo 4.
+
+#### Pregunta 3 (Lección 4.3: Item Database)
+¿Cómo cargas una database de items en Lua?  
+1. Hardcoded.  
+2. Desde JSON o CSV para data-driven, parseando con libraries.  
+3. Solo BP.  
+4. Con print.  
+
+**Opción correcta:** 2  
+**Explicación:** Data-driven evita hardcode; usa json.decode para cargar.  
+**Si error:** Repasar Lección 4.3 del Módulo 4.
+
+#### Pregunta 4 (Lección 4.4: Stats de Personaje)
+¿Qué stats básicas tiene un personaje?  
+1. Solo posición.  
+2. HP, Mana, Atributos como fuerza, agilidad.  
+3. Inputs.  
+4. Diálogos.  
+
+**Opción correcta:** 2  
+**Explicación:** Stats en tablas; actualizados en Tick o events.  
+**Si error:** Repasar Lección 4.4 del Módulo 4.
+
+#### Pregunta 5 (Lección 4.5: Buffs/Debuffs)
+¿Qué son buffs/debuffs en un sistema de stats?  
+1. Errores de código.  
+2. Modificadores temporales a atributos como HP o velocidad, con duración.  
+3. Inputs.  
+4. Animaciones.  
+
+**Opción correcta:** 2  
+**Explicación:** Se aplican vía timers en Lua; afectan stats dinámicamente en combate.  
+**Si error:** Repasar Lección 4.5 del Módulo 4.
+
+#### Pregunta 6 (Lección 4.6: SaveGame)
+¿Cómo guardas progreso en UE5 con Lua?  
+1. Con print.  
+2. Serializando datos a SaveGame objects, usando Load/Save slots.  
+3. Sin guardar.  
+4. Solo local.  
+
+**Opción correcta:** 2  
+**Explicación:** Serializar tablas a JSON o UE structs para persistencia.  
+**Si error:** Repasar Lección 4.6 del Módulo 4.
+
+### Módulo 5: Diálogos e UI
+
+#### Pregunta 1 (Lección 5.1: UMG desde Lua)
+¿Qué es UMG en UE5?  
+1. Un lenguaje.  
+2. Unreal Motion Graphics para crear UI widgets, bindable desde Lua.  
+3. Un pathfinder.  
+4. Audio.  
+
+**Opción correcta:** 2  
+**Explicación:** Permite crear buttons, texts; en UnLua, se instancia y bind eventos.  
+**Si error:** Repasar Lección 5.1 del Módulo 5.
+
+#### Pregunta 2 (Lección 5.2: Sistema de Diálogos)
+¿Cómo estructuras diálogos en Lua?  
+1. Con bucles infinitos.  
+2. Usando JSON para nodos ramificados con opciones y condiciones.  
+3. Solo en BP.  
+4. Con strings concatenadas.  
+
+**Opción correcta:** 2  
+**Explicación:** Diálogos data-driven permiten ramificación basada en elecciones del jugador.  
+**Si error:** Repasar Lección 5.2 del Módulo 5.
+
+#### Pregunta 3 (Lección 5.3: HUD)
+¿Qué incluye un HUD típico?  
+1. Solo menús.  
+2. Barras de HP/mana, textos de stats, iconos en pantalla.  
+3. Pathfinding.  
+4. Redes.  
+
+**Opción correcta:** 2  
+**Explicación:** HUD se crea con UMG y actualiza en Tick desde Lua para feedback en tiempo real.  
+**Si error:** Repasar Lección 5.3 del Módulo 5.
+
+#### Pregunta 4 (Lección 5.4: Localización)
+¿Cómo implementas multi-idioma en UE5?  
+1. Hardcoded.  
+2. Usando FText y localization tables, cargadas en Lua.  
+3. Sin soporte.  
+4. Solo inglés.  
+
+**Opción correcta:** 2  
+**Explicación:** Textos key-based para traducción; switch idiomas runtime.  
+**Si error:** Repasar Lección 5.4 del Módulo 5.
+
+#### Pregunta 5 (Lección 5.5: Animaciones UI)
+¿Qué animaciones UI comunes hay?  
+1. Solo estáticas.  
+2. Fade, Slide, Scale vía UMG animations binded en Lua.  
+3. Pathfinding.  
+4. Combate.  
+
+**Opción correcta:** 2  
+**Explicación:** Animaciones mejoran UX; controladas con PlayAnimation en scripts.  
+**Si error:** Repasar Lección 5.5 del Módulo 5.
+
+#### Pregunta 6 (Lección 5.6: Proyecto)
+¿Qué es un NPC con diálogos ramificados?  
+1. Estático.  
+2. Sistema que usa JSON y UMG para interacciones dinámicas.  
+3. Sin UI.  
+4. Solo audio.  
+
+**Opción correcta:** 2  
+**Explicación:** Proyecto integra diálogos, UI y localización para NPCs interactivos.  
+**Si error:** Repasar Lección 5.6 del Módulo 5.
+
+### Módulo 6: IA de NPCs
+
+#### Pregunta 1 (Lección 6.1: FSM)
+¿Qué es FSM en IA?  
+1. Finite State Machine: estados como patrol/attack, con transiciones y guards.  
+2. Un input.  
+3. UI.  
+4. Inventario.  
+
+**Opción correcta:** 1  
+**Explicación:** FSM simple para IA; en Lua, se implementa con tablas de estados y switches.  
+**Si error:** Repasar Lección 6.1 del Módulo 6.
+
+#### Pregunta 2 (Lección 6.2: Percepción)
+¿Cómo implementas percepción en NPCs?  
+1. Sin nada.  
+2. Con Raycast para visión, FOV y audición simulada.  
+3. Solo movimiento.  
+4. UI.  
+
+**Opción correcta:** 2  
+**Explicación:** Percepción detecta jugadores; en Lua, usa LineTrace para checks.  
+**Si error:** Repasar Lección 6.2 del Módulo 6.
+
+#### Pregunta 3 (Lección 6.3: Behavior Trees)
+¿Qué componentes tiene un Behavior Tree en UE5?  
+1. Solo estados.  
+2. Tasks (acciones), Decorators (condiciones), Services (updates).  
+3. Widgets.  
+4. JSON.  
+
+**Opción correcta:** 2  
+**Explicación:** BTs para IA compleja; integrable con Lua para custom tasks.  
+**Si error:** Repasar Lección 6.3 del Módulo 6.
+
+#### Pregunta 4 (Lección 6.4: Pathfinding)
+¿Qué es NavMesh en UE5?  
+1. Un mesh gráfico.  
+2. Navegation Mesh para pathfinding, usado con MoveTo en Lua.  
+3. Audio.  
+4. Stats.  
+
+**Opción correcta:** 2  
+**Explicación:** Permite movimiento inteligente de NPCs; Lua accede vía AI controllers.  
+**Si error:** Repasar Lección 6.4 del Módulo 6.
+
+#### Pregunta 5 (Lección 6.5: Combate)
+¿Cómo maneja un NPC combate en Lua?  
+1. Sin lógica.  
+2. Con estados para ataque, defensa, flee basado en HP/distancia.  
+3. Solo patrol.  
+4. UI.  
+
+**Opción correcta:** 2  
+**Explicación:** Combate integra percepción y FSM; damage calculation en scripts.  
+**Si error:** Repasar Lección 6.5 del Módulo 6.
+
+#### Pregunta 6 (Lección 6.6: Proyecto)
+¿Qué es guards con IA completa?  
+1. Estáticos.  
+2. NPCs con FSM, percepción, BT y pathfinding para vigilancia.  
+3. Sin IA.  
+4. Solo visual.  
+
+**Opción correcta:** 2  
+**Explicación:** Proyecto une todos los conceptos para IA reactiva.  
+**Si error:** Repasar Lección 6.6 del Módulo 6.
+
+### Módulo 7: Multijugador
+
+#### Pregunta 1 (Lección 7.1: Redes UE5)
+¿Qué modelo usa UE5 para multijugador?  
+1. Peer-to-peer solo.  
+2. Cliente-Servidor con authority en server para validación.  
+3. Singleplayer.  
+4. Local solo.  
+
+**Opción correcta:** 2  
+**Explicación:** Server authority previene cheats; Lua scripts se replican con cuidado.  
+**Si error:** Repasar Lección 7.1 del Módulo 7.
+
+#### Pregunta 2 (Lección 7.2: Replicación)
+¿Qué es replicación en UE5?  
+1. Copiar código.  
+2. Sincronizar properties entre clients/server, con RepNotify para hooks.  
+3. UI.  
+4. IA.  
+
+**Opción correcta:** 2  
+**Explicación:** UPROPERTY(Replicated) para vars; en Lua, se maneja similar.  
+**Si error:** Repasar Lección 7.2 del Módulo 7.
+
+#### Pregunta 3 (Lección 7.3: RPCs)
+¿Qué tipos de RPC hay?  
+1. Solo Server.  
+2. Server (ejecuta en server), Client (en client), Multicast (en todos).  
+3. Local.  
+4. Ninguno.  
+
+**Opción correcta:** 2  
+**Explicación:** RPCs para llamadas remotas; esenciales para acciones sincronizadas en Lua.  
+**Si error:** Repasar Lección 7.3 del Módulo 7.
+
+#### Pregunta 4 (Lección 7.4: Sincronización)
+¿Cómo sincronizas posición en multijugador?  
+1. Sin nada.  
+2. Replicando Location con interpolación para smoothness.  
+3. Solo local.  
+4. Con print.  
+
+**Opción correcta:** 2  
+**Explicación:** Sincroniza estado como health o position; Lua hooks en RepNotify.  
+**Si error:** Repasar Lección 7.4 del Módulo 7.
+
+#### Pregunta 5 (Lección 7.5: Lag Compensation)
+¿Qué es lag compensation?  
+1. Ignorar lag.  
+2. Predicción client-side y reconciliación server para fair play.  
+3. Desconectar.  
+4. UI.  
+
+**Opción correcta:** 2  
+**Explicación:** Técnicas como client prediction reducen percepción de lag en Lua scripts.  
+**Si error:** Repasar Lección 7.5 del Módulo 7.
+
+#### Pregunta 6 (Lección 7.6: Proyecto)
+¿Qué es un mini-juego 2 jugadores?  
+1. Singleplayer.  
+2. Juego con replicación, RPCs y sync para multiplayer básico.  
+3. Sin redes.  
+4. Solo IA.  
+
+**Opción correcta:** 2  
+**Explicación:** Proyecto aplica conceptos para interacción remota.  
+**Si error:** Repasar Lección 7.6 del Módulo 7.
+
+### Módulo 8: Optimización
+
+#### Pregunta 1 (Lección 8.1: Profiling)
+¿Qué herramienta usa UE5 para profiling?  
+1. Lua print.  
+2. Unreal Insights para medir FPS, CPU/GPU.  
+3. JSON.  
+4. UMG.  
+
+**Opción correcta:** 2  
+**Explicación:** Identifica bottlenecks; optimiza Lua scripts para evitar GC spikes.  
+**Si error:** Repasar Lección 8.1 del Módulo 8.
+
+#### Pregunta 2 (Lección 8.2: Object Pooling)
+¿Qué es object pooling?  
+1. Crear objetos nuevos siempre.  
+2. Reutilizar objetos pre-instanciados para evitar alloc/destroy costoso.  
+3. Borrar todo.  
+4. UI.  
+
+**Opción correcta:** 2  
+**Explicación:** Útil en Lua para bullets o enemies; reduce garbage collection.  
+**Si error:** Repasar Lección 8.2 del Módulo 8.
+
+#### Pregunta 3 (Lección 8.3: Memory Management)
+¿Cómo maneja Lua la memoria?  
+1. Manual.  
+2. Garbage Collector automático, pero se optimiza evitando alloc frecuentes.  
+3. Sin GC.  
+4. Con print.  
+
+**Opción correcta:** 2  
+**Explicación:** Monitorea con collectgarbage; usa tables eficientes.  
+**Si error:** Repasar Lección 8.3 del Módulo 8.
+
+#### Pregunta 4 (Lección 8.4: Coroutines)
+¿Qué son coroutines en Lua?  
+1. Bucles.  
+2. Funciones cooperativas para tasks async, como yield/resume.  
+3. Clases.  
+4. Strings.  
+
+**Opción correcta:** 2  
+**Explicación:** Permiten programación asíncrona; en UE5, para waits sin bloquear Tick.  
+**Si error:** Repasar Lección 8.4 del Módulo 8.
+
+#### Pregunta 5 (Lección 8.5: Editor Tools)
+¿Qué es Slate en UE5?  
+1. Un lenguaje.  
+2. Framework para custom editor widgets, extensible en Lua.  
+3. Juego.  
+4. Redes.  
+
+**Opción correcta:** 2  
+**Explicación:** Crea tools como custom panels; para desarrollo eficiente.  
+**Si error:** Repasar Lección 8.5 del Módulo 8.
+
+#### Pregunta 6 (Lección 8.6: Pipeline)
+¿Qué es batch processing en pipeline?  
+1. Procesar uno a uno.  
+2. Automatización para builds, tests o assets en masa.  
+3. Sin automatización.  
+4. UI.  
+
+**Opción correcta:** 2  
+**Explicación:** Pipeline optimiza workflow; usa scripts Lua para automation.  
+**Si error:** Repasar Lección 8.6 del Módulo 8.
+
+### Módulo 9: Sistemas Avanzados
+
+#### Pregunta 1 (Lección 9.1: Procedural)
+¿Qué es WFC en procedural generation?  
+1. Wave Function Collapse para generar dungeons o mapas basados en reglas.  
+2. Un input.  
+3. Redes.  
+4. Stats.  
+
+**Opción correcta:** 1  
+**Explicación:** Algoritmo para contenido procedural; implementable en Lua para variedad.  
+**Si error:** Repasar Lección 9.1 del Módulo 9.
+
+#### Pregunta 2 (Lección 9.2: Materiales)
+¿Qué es MPC en UE5?  
+1. Material Parameter Collection para instances dinámicas.  
+2. Un path.  
+3. IA.  
+4. Diálogos.  
+
+**Opción correcta:** 1  
+**Explicación:** Cambia materiales runtime desde Lua; para efectos visuales.  
+**Si error:** Repasar Lección 9.2 del Módulo 9.
+
+#### Pregunta 3 (Lección 9.3: Audio)
+¿Qué es Metasounds en UE5?  
+1. Audio básico.  
+2. Sistema para audio procedural y adaptive, controlable en Lua.  
+3. UI.  
+4. Pathfinding.  
+
+**Opción correcta:** 2  
+**Explicación:** Audio dinámico basado en game state; integra con events.  
+**Si error:** Repasar Lección 9.3 del Módulo 9.
+
+#### Pregunta 4 (Lección 9.4: Quest System)
+¿Cómo se estructura un quest system?  
+1. Con strings fijas.  
+2. Objectives trackeados, con events para progresión.  
+3. Solo en BP.  
+4. Sin data.  
+
+**Opción correcta:** 2  
+**Explicación:** Data-driven con JSON; Lua maneja tracking y rewards.  
+**Si error:** Repasar Lección 9.4 del Módulo 9.
+
+#### Pregunta 5 (Lección 9.5: Event Bus)
+¿Qué es un Event Bus?  
+1. Un bucle.  
+2. Sistema publisher/subscriber para decoupled communication.  
+3. Hardcoded calls.  
+4. UI.  
+
+**Opción correcta:** 2  
+**Explicación:** Mejora modularidad; en Lua, tablas para subscriptions.  
+**Si error:** Repasar Lección 9.5 del Módulo 9.
+
+#### Pregunta 6 (Lección 9.6: Proyecto)
+¿Qué es un dungeon crawler?  
+1. Juego lineal.  
+2. Procedural dungeon con quests, audio y materiales dinámicos.  
+3. Sin procedural.  
+4. Solo singleplayer.  
+
+**Opción correcta:** 2  
+**Explicación:** Proyecto integra sistemas avanzados para experiencia inmersiva.  
+**Si error:** Repasar Lección 9.6 del Módulo 9.
+
+### Módulo 10: Arquitectura
+
+#### Pregunta 1 (Lección 10.1: Game Framework)
+¿Qué es GameMode en UE5?  
+1. Un actor simple.  
+2. Define reglas del juego, spawns players; accesible en Lua.  
+3. UI.  
+4. Audio.  
+
+**Opción correcta:** 2  
+**Explicación:** GameMode y GameState manejan lógica global; PlayerState por jugador.  
+**Si error:** Repasar Lección 10.1 del Módulo 10.
+
+#### Pregunta 2 (Lección 10.2: PlayerState)
+¿Qué almacena PlayerState?  
+1. Solo posición.  
+2. Stats persistentes como score, inventory across sessions.  
+3. Temporal.  
+4. Nada.  
+
+**Opción correcta:** 2  
+**Explicación:** Replicado en multiplayer; Lua accede para updates.  
+**Si error:** Repasar Lección 10.2 del Módulo 10.
+
+#### Pregunta 3 (Lección 10.3: Data-Driven)
+¿Qué beneficio tiene data-driven?  
+1. Hardcode todo.  
+2. JSON para config, hot-reload sin recompilar.  
+3. Menos flexibilidad.  
+4. Solo BP.  
+
+**Opción correcta:** 2  
+**Explicación:** Facilita cambios; Lua parsea JSON para runtime updates.  
+**Si error:** Repasar Lección 10.3 del Módulo 10.
+
+#### Pregunta 4 (Lección 10.4: Testing)
+¿Qué es luaunit?  
+1. Una UI library.  
+2. Framework para unit testing en Lua, soporta TDD.  
+3. Pathfinding.  
+4. Redes.  
+
+**Opción correcta:** 2  
+**Explicación:** Permite tests automatizados; esencial para arquitectura robusta.  
+**Si error:** Repasar Lección 10.4 del Módulo 10.
+
+#### Pregunta 5 (Lección 10.5: Modularidad)
+¿Cómo se logra modularidad en Lua?  
+1. Todo en un file.  
+2. Con require para imports, modules como tablas exportadas.  
+3. Sin files.  
+4. Con globales.  
+
+**Opción correcta:** 2  
+**Explicación:** Mejora mantenibilidad; en UE5, para scripts reutilizables.  
+**Si error:** Repasar Lección 10.5 del Módulo 10.
+
+#### Pregunta 6 (Lección 10.6: Proyecto)
+¿Qué es un framework completo?  
+1. Básico.  
+2. Arquitectura con GameFramework, data-driven, testing y módulos.  
+3. Sin tests.  
+4. Hardcoded.  
+
+**Opción correcta:** 2  
+**Explicación:** Proyecto une conceptos para base escalable.  
+**Si error:** Repasar Lección 10.6 del Módulo 10.
+
+### Módulo 11: Producción
+
+#### Pregunta 1 (Lección 11.1: Core Loop)
+¿Qué es el core loop?  
+1. Un bucle while.  
+2. Ciclo Input-Update-Render para jugabilidad iterativa.  
+3. Menús.  
+4. Bugs.  
+
+**Opción correcta:** 2  
+**Explicación:** Define la esencia del juego; en Lua, se hookea en Tick.  
+**Si error:** Repasar Lección 11.1 del Módulo 11.
+
+#### Pregunta 2 (Lección 11.2: Content)
+¿Qué incluye content en producción?  
+1. Solo un nivel.  
+2. 3 niveles, 3 enemigos con variaciones.  
+3. Nada.  
+4. Solo UI.  
+
+**Opción correcta:** 2  
+**Explicación:** Content expande core loop; integra assets y lógica.  
+**Si error:** Repasar Lección 11.2 del Módulo 11.
+
+#### Pregunta 3 (Lección 11.3: Menus)
+¿Qué menús básicos necesita un juego?  
+1. Solo pausa.  
+2. Principal, opciones, pausa; creados con UMG en Lua.  
+3. Ninguno.  
+4. Solo HUD.  
+
+**Opción correcta:** 2  
+**Explicación:** Mejoran UX; incluyen settings como audio/volumen.  
+**Si error:** Repasar Lección 11.3 del Módulo 11.
+
+#### Pregunta 4 (Lección 11.4: Polish)
+¿Qué es "juice" en polish?  
+1. Errores.  
+2. Efectos como particles, audio feedback para hacer el juego más vivo.  
+3. Código base.  
+4. Testing.  
+
+**Opción correcta:** 2  
+**Explicación:** Añade inmersión; Lua controla triggers para particles/sounds.  
+**Si error:** Repasar Lección 11.4 del Módulo 11.
+
+#### Pregunta 5 (Lección 11.5: Bug Fixing)
+¿Cómo fix bugs en producción?  
+1. Ignorar.  
+2. Usando debug tools, logs y breakpoints en Lua.  
+3. Sin logs.  
+4. Solo playtest.  
+
+**Opción correcta:** 2  
+**Explicación:** Logs con print o UE Log; sistemático para estabilidad.  
+**Si error:** Repasar Lección 11.5 del Módulo 11.
+
+#### Pregunta 6 (Lección 11.6: Proyecto)
+¿Qué es alpha jugable?  
+1. Incompleto.  
+2. Versión con core loop, content, menús y polish básico.  
+3. Sin jugabilidad.  
+4. Final.  
+
+**Opción correcta:** 2  
+**Explicación:** Proyecto listo para feedback; integra producción.  
+**Si error:** Repasar Lección 11.6 del Módulo 11.
+
+### Módulo 12: Portfolio
+
+#### Pregunta 1 (Lección 12.1: Lua Toolkit)
+¿Qué es un Lua Toolkit?  
+1. Un juego completo.  
+2. Colección de utils/helpers reutilizables como math funcs o string helpers.  
+3. UI.  
+4. Redes.  
+
+**Opción correcta:** 2  
+**Explicación:** Acelera desarrollo; parte de un portfolio para mostrar skills.  
+**Si error:** Repasar Lección 12.1 del Módulo 12.
+
+#### Pregunta 2 (Lección 12.2: Documentación)
+¿Qué es EmmyLua?  
+1. Un juego.  
+2. Anotaciones para documentación y autocompletado en Lua.  
+3. Pathfinding.  
+4. Testing.  
+
+**Opción correcta:** 2  
+**Explicación:** Mejora README; esencial para código compartible en GitHub.  
+**Si error:** Repasar Lección 12.2 del Módulo 12.
+
+#### Pregunta 3 (Lección 12.3: Artículo Técnico)
+¿Cómo estructuras un artículo técnico?  
+1. Aleatorio.  
+2. Intro, métodos, resultados, conclusión; publicar en blogs.  
+3. Sin estructura.  
+4. Solo código.  
+
+**Opción correcta:** 2  
+**Explicación:** Muestra expertise; útil para portfolio.  
+**Si error:** Repasar Lección 12.3 del Módulo 12.
+
+#### Pregunta 4 (Lección 12.4: Devlog)
+¿Cómo creas un devlog?  
+1. Sin grabar.  
+2. Grabar progreso, editar videos para YouTube o blogs.  
+3. Solo texto.  
+4. Ignorar.  
+
+**Opción correcta:** 2  
+**Explicación:** Documenta journey; atrae audiencia.  
+**Si error:** Repasar Lección 12.4 del Módulo 12.
+
+#### Pregunta 5 (Lección 12.5: Portfolio)
+¿Qué incluye un portfolio de dev?  
+1. Solo código.  
+2. 5 proyectos, web con descripciones, screenshots y links.  
+3. Nada.  
+4. Solo un proyecto.  
+
+**Opción correcta:** 2  
+**Explicación:** Muestra skills; usa GitHub/LinkedIn para networking.  
+**Si error:** Repasar Lección 12.5 del Módulo 12.
+
+#### Pregunta 6 (Lección 12.6: Networking)
+¿Cómo usas networking para portfolio?  
+1. Aislamiento.  
+2. Compartir en GitHub, LinkedIn para conexiones y feedback.  
+3. Sin compartir.  
+4. Solo local.  
+
+**Opción correcta:** 2  
+**Explicación:** Construye comunidad; esencial para carrera.  
+**Si error:** Repasar Lección 12.6 del Módulo 12.

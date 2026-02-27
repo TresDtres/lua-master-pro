@@ -1,0 +1,230 @@
+{
+  "Minecraft": {
+    "cc": {
+      "type": "namespace",
+      "description": "ComputerCraft main namespace",
+      "methods": {
+        "getComputerID": { "return": "number", "description": "Get the unique ID of this computer" },
+        "getID": { "return": "number", "description": "Alias for getComputerID" },
+        "label": { "params": ["text: string"], "return": "void", "description": "Set a custom label for this computer" },
+        "getLabel": { "return": "string?", "description": "Get the custom label" },
+        "run": { "params": ["path: string", "env?: table"], "return": "boolean", "description": "Run a program" },
+        "load": { "params": ["code: string", "name?: string", "env?: table"], "return": "function", "description": "Load code as a function" },
+        "sleep": { "params": ["time: number"], "return": "void", "description": "Sleep for specified seconds" },
+        "startTimer": { "params": ["timeout: number"], "return": "number", "description": "Start a timer" },
+        "cancelTimer": { "params": ["id: number"], "return": "void", "description": "Cancel a timer" },
+        "timeOfDay": { "return": "number", "description": "Get the current time in ticks" }
+      }
+    },
+    "peripheral": {
+      "type": "namespace",
+      "description": "Peripheral management",
+      "methods": {
+        "getNames": { "return": "string[]", "description": "Get all peripheral names" },
+        "getType": { "params": ["name: string"], "return": "string?", "description": "Get peripheral type" },
+        "hasType": { "params": ["name: string", "type: string"], "return": "boolean", "description": "Check if peripheral has type" },
+        "call": { "params": ["name: string", "method: string", "...: any"], "return": "any", "description": "Call peripheral method" },
+        "wrap": { "params": ["name: string"], "return": "table", "description": "Wrap peripheral in table" }
+      }
+    },
+    "redstone": {
+      "type": "namespace",
+      "description": "Redstone control",
+      "methods": {
+        "getOutput": { "params": ["side: string"], "return": "number", "description": "Get redstone output level" },
+        "setOutput": { "params": ["side: string", "level: number"], "return": "void", "description": "Set redstone output level" },
+        "getAnalogOutput": { "params": ["side: string"], "return": "number", "description": "Get analog redstone output" },
+        "setAnalogOutput": { "params": ["side: string", "level: number"], "return": "void", "description": "Set analog redstone output" },
+        "getBundledOutput": { "params": ["side: string"], "return": "number", "description": "Get bundled cable output" },
+        "setBundledOutput": { "params": ["side: string", "channels: number"], "return": "void", "description": "Set bundled cable output" },
+        "testBundledOutput": { "params": ["side: string", "channel: number"], "return": "boolean", "description": "Test if channel is on" },
+        "getInput": { "params": ["side: string"], "return": "boolean", "description": "Get redstone input" },
+        "getBundledInput": { "params": ["side: string"], "return": "number", "description": "Get bundled cable input" }
+      }
+    },
+    "rs": {
+      "type": "namespace",
+      "description": "Alias for redstone"
+    },
+    "turtle": {
+      "type": "peripheral",
+      "description": "Turtle robot peripheral",
+      "methods": {
+        "forward": { "return": "boolean", "description": "Move forward" },
+        "back": { "return": "boolean", "description": "Move backward" },
+        "up": { "return": "boolean", "description": "Move up" },
+        "down": { "return": "boolean", "description": "Move down" },
+        "turnLeft": { "return": "boolean", "description": "Turn left" },
+        "turnRight": { "return": "boolean", "description": "Turn right" },
+        "dig": { "params": ["side?: string"], "return": "boolean", "description": "Dig block" },
+        "digUp": { "return": "boolean", "description": "Dig above" },
+        "digDown": { "return": "boolean", "description": "Dig below" },
+        "place": { "params": ["text?: string"], "return": "boolean", "description": "Place item" },
+        "placeUp": { "params": ["text?: string"], "return": "boolean", "description": "Place above" },
+        "placeDown": { "params": ["text?: string"], "return": "boolean", "description": "Place below" },
+        "drop": { "params": ["count?: number"], "return": "boolean", "description": "Drop items" },
+        "dropUp": { "params": ["count?: number"], "return": "boolean", "description": "Drop items up" },
+        "dropDown": { "params": ["count?: number"], "return": "boolean", "description": "Drop items down" },
+        "suck": { "params": ["count?: number"], "return": "boolean", "description": "Suck items" },
+        "suckUp": { "params": ["count?: number"], "return": "boolean", "description": "Suck items up" },
+        "suckDown": { "params": ["count?: number"], "return": "boolean", "description": "Suck items down" },
+        "select": { "params": ["slot: number"], "return": "boolean", "description": "Select slot" },
+        "getSelectedSlot": { "return": "number", "description": "Get selected slot" },
+        "getItemCount": { "params": ["slot?: number"], "return": "number", "description": "Count items in slot" },
+        "getItemSpace": { "params": ["slot?: number"], "return": "number", "description": "Get free space in slot" },
+        "getItemDetail": { "params": ["slot?: number"], "return": "table?", "description": "Get item details" },
+        "compareTo": { "params": ["slot: number"], "return": "number", "description": "Compare with slot" },
+        "transferTo": { "params": ["slot: number", "count?: number"], "return": "boolean", "description": "Transfer items" },
+        "inspect": { "return": "boolean, table", "description": "Inspect block ahead" },
+        "inspectUp": { "return": "boolean, table", "description": "Inspect block above" },
+        "inspectDown": { "return": "boolean, table", "description": "Inspect block below" },
+        "compare": { "return": "boolean", "description": "Compare block ahead" },
+        "compareUp": { "return": "boolean", "description": "Compare block above" },
+        "compareDown": { "return": "boolean", "description": "Compare block below" },
+        "detect": { "return": "boolean", "description": "Detect block ahead" },
+        "detectUp": { "return": "boolean", "description": "Detect block above" },
+        "detectDown": { "return": "boolean", "description": "Detect block below" },
+        "getFuelLevel": { "return": "number", "description": "Get fuel level" },
+        "refuel": { "params": ["count?: number"], "return": "boolean", "description": "Refuel turtle" }
+      }
+    },
+    "monitor": {
+      "type": "peripheral",
+      "description": "Monitor display peripheral",
+      "methods": {
+        "write": { "params": ["text: string"], "return": "void", "description": "Write text" },
+        "clear": { "return": "void", "description": "Clear screen" },
+        "clearLine": { "return": "void", "description": "Clear current line" },
+        "getCursorPos": { "return": "number, number", "description": "Get cursor position" },
+        "setCursorPos": { "params": ["x: number", "y: number"], "return": "void", "description": "Set cursor position" },
+        "getCursorBlink": { "return": "boolean", "description": "Get cursor blink state" },
+        "setCursorBlink": { "params": ["blink: boolean"], "return": "void", "description": "Set cursor blink" },
+        "getSize": { "return": "number, number", "description": "Get screen size" },
+        "scroll": { "params": ["lines: number"], "return": "void", "description": "Scroll screen" },
+        "setTextColor": { "params": ["color: number"], "return": "void", "description": "Set text color" },
+        "getTextColor": { "return": "number", "description": "Get text color" },
+        "setBackgroundColor": { "params": ["color: number"], "return": "void", "description": "Set background color" },
+        "getBackgroundColor": { "return": "number", "description": "Get background color" },
+        "isColor": { "return": "boolean", "description": "Check if color capable" },
+        "blit": { "params": ["text: string", "textColor: string", "backgroundColor: string"], "return": "void", "description": "Batch write" },
+        "setTextScale": { "params": ["scale: number"], "return": "void", "description": "Set text scale" },
+        "getTextScale": { "return": "number", "description": "Get text scale" },
+        "setPaletteColor": { "params": ["color: number", "r: number", "g: number", "b: number"], "return": "void", "description": "Set palette color" },
+        "getPaletteColor": { "params": ["color: number"], "return": "number, number, number", "description": "Get palette color" }
+      }
+    },
+    "disk": {
+      "type": "peripheral",
+      "description": "Disk drive peripheral",
+      "methods": {
+        "isDiskPresent": { "return": "boolean", "description": "Check if disk present" },
+        "getLabel": { "return": "string?", "description": "Get disk label" },
+        "setLabel": { "params": ["label: string"], "return": "void", "description": "Set disk label" },
+        "hasData": { "return": "boolean", "description": "Check if disk has data" },
+        "setReadOnly": { "params": ["readOnly: boolean"], "return": "void", "description": "Set disk read-only" },
+        "getMountPath": { "return": "string", "description": "Get disk mount path" },
+        "hasAudio": { "return": "boolean", "description": "Check if disk has audio" },
+        "playAudio": { "return": "void", "description": "Play disk audio" },
+        "stopAudio": { "return": "void", "description": "Stop audio playback" },
+        "eject": { "return": "void", "description": "Eject disk" }
+      }
+    },
+    "speaker": {
+      "type": "peripheral",
+      "description": "Speaker peripheral for sounds",
+      "methods": {
+        "playNote": { "params": ["instrument: string", "volume: number", "pitch: number"], "return": "boolean", "description": "Play a note" },
+        "playSound": { "params": ["name: string", "volume: number", "pitch: number"], "return": "boolean", "description": "Play a sound" }
+      }
+    },
+    "modem": {
+      "type": "peripheral",
+      "description": "Wireless modem peripheral",
+      "methods": {
+        "isOpen": { "params": ["channel: number"], "return": "boolean", "description": "Check if channel open" },
+        "open": { "params": ["channel: number"], "return": "void", "description": "Open channel" },
+        "close": { "params": ["channel: number"], "return": "void", "description": "Close channel" },
+        "closeAll": { "return": "void", "description": "Close all channels" },
+        "transmit": { "params": ["channel: number", "replyChannel: number", "payload: any"], "return": "void", "description": "Transmit message" },
+        "isWireless": { "return": "boolean", "description": "Check if wireless" }
+      }
+    },
+    "http": {
+      "type": "namespace",
+      "description": "HTTP request handling",
+      "methods": {
+        "get": { "params": ["url: string", "headers?: table"], "return": "table?", "description": "HTTP GET request" },
+        "post": { "params": ["url: string", "body: string|table", "headers?: table"], "return": "table?", "description": "HTTP POST request" },
+        "put": { "params": ["url: string", "body: string|table", "headers?: table"], "return": "table?", "description": "HTTP PUT request" },
+        "delete": { "params": ["url: string", "headers?: table"], "return": "table?", "description": "HTTP DELETE request" },
+        "websocketAsync": { "params": ["url: string", "headers?: table"], "return": "void", "description": "Open websocket" }
+      }
+    },
+    "gps": {
+      "type": "namespace",
+      "description": "GPS positioning",
+      "methods": {
+        "locate": { "params": ["timeout?: number", "debug?: boolean"], "return": "number?, number?, number?", "description": "Get current position" }
+      }
+    },
+    "commands": {
+      "type": "peripheral",
+      "description": "Command block peripheral",
+      "methods": {
+        "exec": { "params": ["command: string"], "return": "boolean, table", "description": "Execute command" },
+        "execAsync": { "params": ["command: string"], "return": "void", "description": "Execute command async" },
+        "setCommand": { "params": ["command: string"], "return": "void", "description": "Set command" },
+        "getCommand": { "return": "string", "description": "Get current command" },
+        "runCommand": { "params": ["command: string"], "return": "table", "description": "Run command" }
+      }
+    },
+    "colors": {
+      "type": "namespace",
+      "description": "Color constants",
+      "properties": {
+        "white": { "type": "number", "value": 1 },
+        "orange": { "type": "number", "value": 2 },
+        "magenta": { "type": "number", "value": 4 },
+        "lightBlue": { "type": "number", "value": 8 },
+        "yellow": { "type": "number", "value": 16 },
+        "lime": { "type": "number", "value": 32 },
+        "pink": { "type": "number", "value": 64 },
+        "gray": { "type": "number", "value": 128 },
+        "lightGray": { "type": "number", "value": 256 },
+        "cyan": { "type": "number", "value": 512 },
+        "purple": { "type": "number", "value": 1024 },
+        "blue": { "type": "number", "value": 2048 },
+        "brown": { "type": "number", "value": 4096 },
+        "green": { "type": "number", "value": 8192 },
+        "red": { "type": "number", "value": 16384 },
+        "black": { "type": "number", "value": 32768 }
+      },
+      "methods": {
+        "combine": { "params": ["...: number"], "return": "number", "description": "Combine colors" },
+        "subtract": { "params": ["colors: number", "...: number"], "return": "number", "description": "Subtract colors" },
+        "test": { "params": ["colors: number", "color: number"], "return": "boolean", "description": "Test if color present" }
+      }
+    },
+    "sides": {
+      "type": "namespace",
+      "description": "Side constants",
+      "properties": {
+        "top": { "type": "number", "value": 0 },
+        "bottom": { "type": "number", "value": 1 },
+        "left": { "type": "number", "value": 2 },
+        "right": { "type": "number", "value": 3 },
+        "front": { "type": "number", "value": 4 },
+        "back": { "type": "number", "value": 5 }
+      }
+    },
+    "events": {
+      "type": "namespace",
+      "description": "Event handling",
+      "methods": {
+        "pull": { "params": ["filter?: string"], "return": "...: any", "description": "Pull next event" },
+        "pullFiltered": { "params": ["filter: string"], "return": "...: any", "description": "Pull filtered event" },
+        "cancel": { "return": "void", "description": "Cancel current wait" }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+---
+title: "Mes 1: Fundamentos de Luau y Roblox Studio"
+duration: "4 semanas · ~60 horas"
+phase: "Fase I: Fundamentos"
+objectives:
+  - "Comprender las diferencias entre Lua 5.1 y Luau (Tipado, Optimizaciones)"
+  - "Dominar el entorno de Roblox Studio y la ventana de Output"
+  - "Entender la diferencia crítica entre Script (Server) y LocalScript (Client)"
+  - "Usar la librería 'task' para manejo de tiempos y corrutinas modernas"
+  - "Manipular propiedades básicas de Parts desde código"
+deliverable: "Scripts Luau: Calculadora con Type Checking, Loop de cambio de colores (Disco Floor) y sistema de daño básico."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { EngineComparison } from "@/components/mdx/EngineComparison"
+import { Terminal, AlertTriangle } from "lucide-react"
+
+# Introducción a Luau
+
+Roblox no usa Lua estándar, usa **Luau**, un derivado potente creado por Roblox. Es más rápido e incluye análisis de tipos gradual. Este mes aprenderás a pensar en "Luau" y a navegar la interfaz de Studio.
+
+<Alert variant="destructive" className="my-6">
+  <AlertTriangle className="h-4 w-4" />
+  <AlertTitle>Advertencia de Rendimiento</AlertTitle>
+  <AlertDescription>
+    A diferencia de UE5 (C++ compilado), Luau es interpretado (aunque muy optimizado). Evita bucles infinitos sin `task.wait()` o colapsarás el hilo principal del juego.
+  </AlertDescription>
+</Alert>
+
+## Diferencias de Entorno
+
+<EngineComparison title="Ejecución de Código">
+  {{
+    ue5: <p>Los scripts suelen ejecutarse vinculados al ciclo de vida del Actor (`BeginPlay`). Se usa `print()` para loguear en la consola de Output de Unreal.</p>,
+    roblox: <p>Los scripts corren inmediatamente al iniciar el juego (Run). Existen `Script` (Servidor) y `LocalScript` (Cliente). Usamos la ventana de Output de Studio.</p>
+  }}
+</EngineComparison>
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>Sintaxis Luau — Tipado gradual (`--!strict`), tipos `number`, `string`, `Vector3`, `CFrame`</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Contextos — Server (`Script`) vs Client (`LocalScript`). El concepto de `game.Workspace`</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>Control de Flujo Moderno — `task.wait()`, `task.spawn()`, bucles `for i,v in ipairs()`</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Tablas y Diccionarios — Manipulación de datos y propiedades de instancias (`Part.Color`, `Part.Anchored`)</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <Terminal className="h-4 w-4" />
+  <AlertTitle>Scripts Luau Fundamentales</AlertTitle>
+  <AlertDescription>
+    Calculadora con Type Checking estricto, un suelo de discoteca que cambia de color con `task.spawn`, y un bloque que daña al jugador al tocarlo (Killbrick).
+  </AlertDescription>
+</Alert>

@@ -1,0 +1,180 @@
+¡Excelente enfoque! Separar Roblox como **herramienta de refuerzo** y usar **capturas reales de los motores** le dará autenticidad profesional al proyecto. Esto transforma la web en un recurso válido y verificable.
+
+Aquí tienes la **secuencia de Prompts Actualizada** para `qwen-Coder`. He integrado un **Sistema de Especificación de Assets** que hará que la web te solicite las imágenes específicas que necesitas capturar en los motores.
+
+---
+
+### 🔄 Prompt 1: Reestructuración de la Arquitectura (Separación de Motores)
+**Objetivo:** Definir la web como un "Hub Central" con dos rutas de aprendizaje distintas, donde Roblox sirve como práctica de fundamentos y UE5 como especialización profesional.
+
+```markdown
+# ROL: Arquitecto de Software & Diseñador Instruccional
+# TAREA: Reestructurar Plataforma "Lua Mastery Hub"
+
+Vamos a ajustar la arquitectura. No son dos cursos paralelos idénticos, sino un ecosistema integrado:
+1. **Lua Core (Roblox Studio):** Entorno seguro para aprender fundamentos de Lua sin la complejidad de C++/UE5.
+2. **Lua Pro (Unreal Engine 5):** Especialización profesional con UnLua para producción real.
+
+## Estructura de Carpetas Actualizada:
+- `/content/core`: Fundamentos de Lua (aplicables a ambos, ejemplos ejecutables en Roblox).
+- `/content/ue5`: Ruta profesional (UnLua, integración C++, Shaders, IA avanzada).
+- `/content/assets`: Carpeta para imágenes y screenshots (organizada por módulo).
+- `/components`: Componentes UI (incluyendo un componente `AssetRequest` para mostrar qué imágenes faltan).
+
+## Acción:
+1. Configura Next.js 14 + Tailwind + MDX.
+2. Crea una **Landing Page** que explique claramente esta dualidad: "Aprende la lógica en Roblox, aplícala profesionalmente en UE5".
+3. Implementa un sistema de rutas dinámicas para que el contenido se cargue según el "Track" elegido.
+4. Prepara la estructura para recibir assets externos (imágenes locales en `/public/assets`).
+```
+
+---
+
+### 📸 Prompt 2: Sistema de Especificación de Assets (Tu flujo de trabajo)
+**Objetivo:** Que la web genere automáticamente una "Lista de Capturas" para que sepas qué fotografiar en los motores.
+
+```markdown
+# ROL: Technical Artist & Content Manager
+# TAREA: Implementar Sistema de Requerimientos de Imágenes
+
+Necesito un sistema que me diga exactamente qué capturas de pantalla debo tomar en Roblox Studio y UE5 para cada lección.
+
+## Funcionalidad:
+1. **Frontmatter en MDX:** Cada archivo de lección debe tener un campo `requiredAssets` en su frontmatter.
+   Ejemplo:
+   ```yaml
+   requiredAssets:
+     - id: "ue5_mes2_01"
+       description: "Captura del Viewport mostrando el Actor con el script Lua asignado en el Details Panel"
+       engine: "UE5"
+       resolution: "1920x1080"
+     - id: "rbx_mes1_03"
+       description: "Captura del Output de Roblox Studio mostrando el print() de la tabla de inventario"
+       engine: "Roblox"
+   ```
+
+2. **Página de Producción (`/production`):** Una ruta privada que escanee todo el contenido y genere un **Checklist de Assets Faltantes**.
+   - Debe mostrar: ID, Descripción, Motor, Estado (Pendiente/Completado).
+   - Debe permitir marcar como "Subido" cuando yo coloque el archivo en la carpeta pública.
+
+3. **Componente `AssetPlaceholder`:** En las lecciones, si la imagen no existe, mostrar un cuadro gris con la descripción de qué captura se necesita. Si existe, mostrar la imagen real.
+
+## Acción:
+Genera el código para este sistema de gestión de assets. Quiero poder ver una lista clara de "Tareas de Captura" antes de empezar a escribir el contenido visual.
+```
+
+---
+
+### 📘 Prompt 3: Inyección del Contenido UE5 (Plan Original)
+**Objetivo:** Volcar el plan de 12 meses en la web, vinculando cada mes con sus requisitos de imagen.
+
+```markdown
+# ROL: Technical Writer
+# TAREA: Convertir Plan UE5 a MDX con Solicitudes de Imágenes
+
+Usa el documento "Plan_Estudio_Lua_UE5.md" proporcionado. Convierte cada Mes en una carpeta de contenido MDX dentro de `/content/ue5`.
+
+## Instrucciones Críticas:
+1. **Estructura:** Crea un archivo por semana (ej: `mes-1-semana-1.mdx`).
+2. **Frontmatter:** Incluye `title`, `objectives`, `deliverable` y el array `requiredAssets`.
+3. **Generación de Solicitudes de Imagen:** Para cada mes, analiza el contenido y añade en el frontmatter las capturas necesarias.
+   - *Ejemplo Mes 2:* Pide una captura del "Hello Unreal World" con los 10 cubos.
+   - *Ejemplo Mes 6:* Pide una captura del Behavior Tree en el Editor de UE5 mostrando las tareas de Lua.
+   - *Ejemplo Mes 8:* Pide una captura de la ventana custom del Editor creada con Slate API.
+
+4. **Tonos:** Mantén el tono profesional del plan original (730 horas, enfoque en producción). No lo simplifiques.
+
+## Acción:
+Genera los archivos MDX para la Fase I (Meses 1-3) completos, incluyendo las solicitudes de assets específicos para que yo sepa qué capturar en UE5.
+```
+
+---
+
+### 🤖 Prompt 4: Ruta de Refuerzo Roblox (Fundamentos)
+**Objetivo:** Crear la ruta de Roblox enfocada en validar la lógica de Lua antes de pasar a UE5.
+
+```markdown
+# ROL: Experto en Roblox Studio & Luau
+# TAREA: Crear Ruta de Refuerzo "Lua Core" en Roblox
+
+Esta ruta no es un curso de Roblox, es un **laboratorio de Lua**. El objetivo es validar la lógica del Mes 1-3 de UE5 en un entorno más amigable.
+
+## Mapeo de Contenidos:
+- **UE5 Mes 1 (Sintaxis)** ↔ **Roblox Lab 1:** Scripts básicos en ServerScriptService, output de consola.
+- **UE5 Mes 2 (OOP)** ↔ **Roblox Lab 2:** Módulos y clases para items (ej: sistema de espadas).
+- **UE5 Mes 3 (Eventos)** ↔ **Roblox Lab 3:** RemoteEvents vs Delegates de UE5 (explicar diferencias).
+
+## Solicitudes de Imágenes (Roblox):
+Para cada Lab, genera en el frontmatter las solicitudes de capturas:
+- Editor de Script de Roblox Studio (con resaltado de sintaxis).
+- Ventana de Output mostrando resultados.
+- Viewport de Roblox mostrando el resultado visual (ej: parte cambiando de color).
+
+## Acción:
+Genera los archivos MDX para `/content/core` (Labs 1-3). Asegúrate de incluir bloques de código comparativos: "Así se hace en Lua Puro (Roblox)" vs "Así se hará en UnLua (UE5)".
+```
+
+---
+
+### ✅ Prompt 5: Dashboard de Progreso con Validación de Assets
+**Objetivo:** Que el estudiante (y tú) vean el progreso real incluyendo los recursos visuales.
+
+```markdown
+# ROL: Frontend Developer
+# TAREA: Dashboard de Progreso y Validación Visual
+
+El dashboard debe reflejar la seriedad del plan de 12 meses.
+
+## Características:
+1. **Barra de Progreso Dual:** Muestra progreso de Teoría (MDX leídos) y progreso de Práctica (Assets validados/Entregables).
+2. **Galería de Entregables:** Una sección donde se muestran las capturas reales de los proyectos (las que yo tomaré).
+   - Si el asset está pendiente, muestra un placeholder con la descripción.
+   - Si está completo, muestra la captura real con un badge "Verificado".
+3. **Exportar Portfolio:** Botón para generar un PDF con el progreso y las imágenes de los entregables completados (útil para que el estudiante lo use como CV).
+4. **Persistencia:** localStorage para guardar el progreso del usuario.
+
+## Acción:
+Implementa el dashboard en `/app/dashboard` y el componente de galería de entregables conectado al sistema de assets del Prompt 2.
+```
+
+---
+
+### 🛠️ Prompt 6: Guía de Producción para Ti (El Creador)
+**Objetivo:** Generar un documento para que tú sepas exactamente qué hacer fuera del código.
+
+```markdown
+# ROL: Project Manager
+# TAREA: Generar Documentación de Producción de Assets
+
+Crea un archivo `PRODUCCION_ASSETS.md` en la raíz del proyecto. Este archivo es para mí (el creador del contenido).
+
+## Debe incluir:
+1. **Lista Maestra de Capturas:** Una tabla generada a partir de todo el contenido MDX, listando TODAS las imágenes que necesito capturar en los motores.
+   - Columnas: ID, Módulo, Motor (UE5/Roblox), Descripción de la escena, Resolución sugerida.
+2. **Guía de Estilo Visual:**
+   - UE5: Usar modo "Lit", mostrar UI del Editor (Details Panel, Content Drawer), resolución 1920x1080.
+   - Roblox: Tema oscuro en Script Editor, mostrar ventana Output, resolución 1920x1080.
+3. **Flujo de Trabajo:**
+   - Paso 1: Leer MDX.
+   - Paso 2: Recrear escena en el motor.
+   - Paso 3: Capturar y guardar en `/public/assets/[id].png`.
+   - Paso 4: Marcar como completado en la página `/production`.
+
+## Acción:
+Genera este archivo Markdown detallado para que pueda empezar a producir las imágenes reales mientras la web se construye.
+```
+
+---
+
+### 💡 Flujo de Trabajo Sugerido para Ti
+
+1.  **Ejecuta los Prompts 1, 2 y 3:** Esto creará la web y te dará la lista de imágenes necesarias para la **Fase I (UE5)**.
+2.  **Revisa `PRODUCCION_ASSETS.md`:** Ahí tendrás tu lista de tareas de captura.
+3.  **Captura en los Motores:**
+    *   Abre UE5 o Roblox.
+    *   Recrea el ejemplo del Mes 1.
+    *   Toma la captura (ej: `ue5_mes2_01.png`).
+    *   Guárdala en la carpeta que la web te indique.
+4.  **Ejecuta los Prompts 4, 5 y 6:** Para completar la ruta de Roblox y el dashboard final.
+
+De esta forma, **Qwen-Coder construye el contenedor y tú lo llenas con contenido real verificado**, asegurando que el curso sea auténtico y útil.

@@ -1,0 +1,60 @@
+---
+title: "Mes 9: Sistemas Avanzados: Procedural, Shaders y Audio"
+duration: "4 semanas · ~60 horas"
+phase: "Fase III: Avanzado"
+objectives:
+  - "Generación procedural de contenido (niveles, terreno, vegetación) desde Lua"
+  - "Controlar el sistema de materiales dinámicos y Material Parameter Collections desde Lua"
+  - "Integrar Metasounds y el sistema de audio de UE5 con scripts Lua"
+  - "Implementar un sistema de quests/misiones complejo con Lua"
+  - "Crear un sistema de eventos de juego (Game Events Bus) con publisher/subscriber en Lua"
+deliverable: "Dungeon Crawler procedural: cada ejecución genera un nivel único, con enemigos, audio adaptativo al peligro y sistema de 5 misiones encadenadas. Todo en Lua."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { CodeSnippet } from "@/components/ui/CodeSnippet"
+import { Wand2 } from "lucide-react"
+
+# Introducción
+
+En este último mes de la fase avanzada, llevaremos Lua al límite creativo. No solo controlaremos lógica, sino que generaremos el mundo mismo. Aprenderás a crear niveles que nunca son iguales, a manipular gráficos (materiales) en tiempo real y a orquestar audio dinámico, todo orquestado por tus scripts.
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>Generación procedural — algoritmos de dungeon, WFC básico implementado en Lua</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Materiales dinámicos — MPC, dynamic material instances controlados desde Lua</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>Audio — Metasound parameters, audio component control, música adaptativa en Lua</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Quest system — objetivos, tracking, rewards, events bus; sistema completo en Lua</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <Wand2 className="h-4 w-4" />
+  <AlertTitle>Dungeon Crawler Procedural</AlertTitle>
+  <AlertDescription>
+    Cada ejecución genera un nivel único, con enemigos, audio adaptativo al peligro y sistema de 5 misiones encadenadas. Todo en Lua.
+  </AlertDescription>
+</Alert>

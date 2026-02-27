@@ -1,0 +1,69 @@
+---
+title: "Mes 3: Networking y FilteringEnabled"
+duration: "4 semanas · ~60 horas"
+phase: "Fase I: Fundamentos"
+objectives:
+  - "Entender profundamente el modelo Cliente-Servidor (FilteringEnabled)"
+  - "Usar RemoteEvents y RemoteFunctions para comunicación segura"
+  - "Manejar Input del usuario (UserInputService / ContextActionService)"
+  - "Crear GUIs básicas (ScreenGui) y conectarlas con scripts"
+  - "Validación en el servidor (Sanity Checks)"
+deliverable: "Mini-juego 'Clicker Competitivo': UI que cuenta clicks, envía datos al servidor, valida y actualiza un Leaderboard global."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { EngineComparison } from "@/components/mdx/EngineComparison"
+import { Network, ShieldCheck } from "lucide-react"
+
+# Introducción
+
+La seguridad en Roblox es primordial. Lo que hace un hacker en su cliente no debe afectar al servidor. Este mes aprenderás a cruzar la frontera Cliente-Servidor usando **Remotes**, el equivalente al sistema de RPCs de otros motores.
+
+## El Muro de Fuego (FilteringEnabled)
+
+<EngineComparison title="Comunicación de Red">
+  {{
+    ue5: <p>Usa **Replicated Properties** y **RPCs** (Server, Client, Multicast). La replicación suele ser automática si se marca la variable.</p>,
+    roblox: <p>No hay replicación automática de variables de Lua. Debes enviar datos explícitamente a través de **RemoteEvents**. El servidor es la autoridad absoluta.</p>
+  }}
+</EngineComparison>
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>RemoteEvents — FireServer, OnServerEvent, FireClient, OnClientEvent</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>RemoteFunctions — Peticiones bidireccionales (y por qué evitarlas si es posible)</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>Input & UI — UserInputService para detectar teclas/clicks y ScreenGui básico</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Seguridad — Sanity Checks: nunca confíes en los datos que envía el cliente</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <Network className="h-4 w-4" />
+  <AlertTitle>Mini-juego 'Clicker Competitivo'</AlertTitle>
+  <AlertDescription>
+    Interfaz (GUI) que cuenta clicks. Cada click envía un evento al servidor. El servidor verifica la velocidad (anti-autoclicker) y actualiza los puntos visibles para todos.
+  </AlertDescription>
+</Alert>

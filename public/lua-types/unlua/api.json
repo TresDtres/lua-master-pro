@@ -1,0 +1,304 @@
+{
+  "UnLua": {
+    "UObject": {
+      "type": "class",
+      "description": "Base class for all Unreal Engine objects",
+      "methods": {
+        "IsValid": { "return": "boolean", "description": "Check if object is valid" },
+        "GetClass": { "return": "UClass", "description": "Get the class of the object" },
+        "GetName": { "return": "string", "description": "Get the name of the object" },
+        "GetPathName": { "return": "string", "description": "Get the full path name" },
+        "IsA": { "params": ["className: string"], "return": "boolean", "description": "Check if object is of a specific class" }
+      }
+    },
+    "AActor": {
+      "type": "class",
+      "extends": "UObject",
+      "description": "Base class for all actors in the world",
+      "properties": {
+        "RootComponent": { "type": "USceneComponent" },
+        "ActorLocation": { "type": "FVector" },
+        "ActorRotation": { "type": "FRotator" },
+        "bHidden": { "type": "boolean" },
+        "bActorEnableCollision": { "type": "boolean" }
+      },
+      "methods": {
+        "Destroy": { "return": "void", "description": "Destroy the actor" },
+        "SetActorLocation": { "params": ["location: FVector"], "return": "void" },
+        "SetActorRotation": { "params": ["rotation: FRotator"], "return": "void" },
+        "GetActorLocation": { "return": "FVector" },
+        "GetActorRotation": { "return": "FRotator" },
+        "GetWorld": { "return": "UWorld" },
+        "BeginPlay": { "description": "Called when the game starts" },
+        "Tick": { "params": ["DeltaTime: number"], "description": "Called every frame" }
+      }
+    },
+    "UActorComponent": {
+      "type": "class",
+      "extends": "UObject",
+      "description": "Base class for actor components",
+      "methods": {
+        "GetOwner": { "return": "AActor" },
+        "SetActive": { "params": ["bActive: boolean"], "return": "void" },
+        "IsActive": { "return": "boolean" }
+      }
+    },
+    "USceneComponent": {
+      "type": "class",
+      "extends": "UActorComponent",
+      "properties": {
+        "RelativeLocation": { "type": "FVector" },
+        "RelativeRotation": { "type": "FRotator" },
+        "RelativeScale3D": { "type": "FVector" }
+      },
+      "methods": {
+        "GetForwardVector": { "return": "FVector" },
+        "GetRightVector": { "return": "FVector" },
+        "GetUpVector": { "return": "FVector" },
+        "AddLocalOffset": { "params": ["offset: FVector"], "return": "void" },
+        "AddLocalRotation": { "params": ["rotation: FRotator"], "return": "void" }
+      }
+    },
+    "UPrimitiveComponent": {
+      "type": "class",
+      "extends": "USceneComponent",
+      "methods": {
+        "SetCollisionEnabled": { "params": ["type: ECollisionEnabled"], "return": "void" },
+        "SetCollisionResponseToChannel": { "params": ["channel: ECollisionChannel", "response: ECollisionResponse"], "return": "void" },
+        "OnComponentBeginOverlap": { "type": "FScriptDelegate" },
+        "OnComponentEndOverlap": { "type": "FScriptDelegate" }
+      }
+    },
+    "UStaticMeshComponent": {
+      "type": "class",
+      "extends": "UPrimitiveComponent",
+      "properties": {
+        "StaticMesh": { "type": "UStaticMesh" }
+      },
+      "methods": {
+        "SetStaticMesh": { "params": ["mesh: UStaticMesh"], "return": "boolean" }
+      }
+    },
+    "USkeletalMeshComponent": {
+      "type": "class",
+      "extends": "UPrimitiveComponent",
+      "properties": {
+        "SkeletalMesh": { "type": "USkeletalMesh" }
+      },
+      "methods": {
+        "PlayAnimation": { "params": ["animation: UAnimSequence", "bLooping: boolean"], "return": "void" },
+        "StopAnimation": { "params": ["animation: UAnimSequence"], "return": "void" },
+        "SetAnimClass": { "params": ["class: UClass"], "return": "void" }
+      }
+    },
+    "UBoxComponent": {
+      "type": "class",
+      "extends": "UPrimitiveComponent",
+      "properties": {
+        "BoxExtent": { "type": "FVector" }
+      },
+      "methods": {
+        "SetBoxExtent": { "params": ["extent: FVector"], "return": "void" },
+        "GetBoxExtent": { "return": "FVector" }
+      }
+    },
+    "UInputComponent": {
+      "type": "class",
+      "extends": "UActorComponent",
+      "methods": {
+        "BindAction": { "params": ["actionName: string", "eventType: EInputEvent", "target: table", "func: string"], "return": "void" },
+        "BindAxis": { "params": ["axisName: string", "target: table", "func: string"], "return": "void" }
+      }
+    },
+    "APlayerController": {
+      "type": "class",
+      "extends": "AActor",
+      "methods": {
+        "GetPawn": { "return": "APawn" },
+        "SetPawn": { "params": ["pawn: APawn"], "return": "void" },
+        "AddInputVector": { "params": ["worldDirection: FVector"], "return": "void" },
+        "GetHitResultUnderCursor": { "params": ["traceChannel: ETraceTypeQuery"], "return": "FHitResult" }
+      }
+    },
+    "APawn": {
+      "type": "class",
+      "extends": "AActor",
+      "properties": {
+        "Controller": { "type": "AController" }
+      },
+      "methods": {
+        "AddMovementInput": { "params": ["worldDirection: FVector", "scale: number"], "return": "void" },
+        "LaunchCharacter": { "params": ["launchVelocity: FVector", "bOverrideInput: boolean", "bVelocityChange: boolean"], "return": "void" }
+      }
+    },
+    "ACharacter": {
+      "type": "class",
+      "extends": "APawn",
+      "properties": {
+        "CharacterMovement": { "type": "UCharacterMovementComponent" },
+        "Mesh": { "type": "USkeletalMeshComponent" }
+      },
+      "methods": {
+        "Jump": { "return": "void" },
+        "StopJumping": { "return": "void" },
+        "IsMovingOnGround": { "return": "boolean" },
+        "IsFalling": { "return": "boolean" }
+      }
+    },
+    "UCharacterMovementComponent": {
+      "type": "class",
+      "extends": "UMovementComponent",
+      "properties": {
+        "MaxWalkSpeed": { "type": "number" },
+        "JumpZVelocity": { "type": "number" },
+        "GravityScale": { "type": "number" },
+        "bCrouchMovesCharacter": { "type": "boolean" }
+      },
+      "methods": {
+        "IsWalking": { "return": "boolean" },
+        "IsFalling": { "return": "boolean" },
+        "IsSwimming": { "return": "boolean" }
+      }
+    },
+    "UWorld": {
+      "type": "class",
+      "extends": "UObject",
+      "methods": {
+        "SpawnActor": { "params": ["class: TSubclassOf<AActor>", "spawnLocation: FVector", "spawnRotation: FRotator"], "return": "AActor" },
+        "GetFirstPlayerController": { "return": "APlayerController" },
+        "GetTimeSeconds": { "return": "number" },
+        "LineTraceByChannel": { "params": ["start: FVector", "end: FVector", "traceChannel: ECollisionChannel"], "return": "FHitResult" }
+      }
+    },
+    "UGameplayStatics": {
+      "type": "class",
+      "description": "Blueprint function library for common gameplay operations",
+      "methods": {
+        "GetPlayerController": { "params": ["world: UWorld", "playerIndex: number"], "return": "APlayerController" },
+        "GetPlayerPawn": { "params": ["world: UWorld", "playerIndex: number"], "return": "APawn" },
+        "SpawnActor": { "params": ["world: UWorld", "class: TSubclassOf<AActor>", "location: FVector", "rotation: FRotator"], "return": "AActor" },
+        "OpenLevel": { "params": ["world: UWorld", "levelName: FName"], "return": "void" },
+        "ExecuteConsoleCommand": { "params": ["world: UWorld", "command: string"], "return": "void" }
+      }
+    },
+    "UKismetSystemLibrary": {
+      "type": "class",
+      "description": "System utility functions",
+      "methods": {
+        "PrintString": { "params": ["worldContext: UObject", "inString: string", "bPrintToScreen: boolean", "bPrintToLog: boolean", "textColor: FLinearColor", "duration: number"], "return": "void" },
+        "DrawDebugLine": { "params": ["world: UWorld", "lineStart: FVector", "lineEnd: FVector", "lineColor: FLinearColor", "duration: number"], "return": "void" }
+      }
+    },
+    "FVector": {
+      "type": "struct",
+      "description": "3D vector for positions and directions",
+      "constructors": [
+        "new(x: number, y: number, z: number)",
+        "ZeroVector",
+        "OneVector"
+      ],
+      "properties": {
+        "X": { "type": "number" },
+        "Y": { "type": "number" },
+        "Z": { "type": "number" }
+      },
+      "methods": {
+        "Size": { "return": "number", "description": "Get the length of the vector" },
+        "SizeSquared": { "return": "number" },
+        "Normalize": { "return": "FVector" },
+        "Dot": { "params": ["other: FVector"], "return": "number" },
+        "Cross": { "params": ["other: FVector"], "return": "FVector" },
+        "Lerp": { "params": ["target: FVector", "alpha: number"], "return": "FVector" },
+        "Distance": { "params": ["other: FVector"], "return": "number" }
+      },
+      "operators": {
+        "add": "FVector + FVector",
+        "sub": "FVector - FVector",
+        "mul": "FVector * number",
+        "div": "FVector / number"
+      }
+    },
+    "FRotator": {
+      "type": "struct",
+      "description": "Rotation in degrees (pitch, yaw, roll)",
+      "constructors": [
+        "new(pitch: number, yaw: number, roll: number)",
+        "ZeroRotator"
+      ],
+      "properties": {
+        "Pitch": { "type": "number" },
+        "Yaw": { "type": "number" },
+        "Roll": { "type": "number" }
+      },
+      "methods": {
+        "Normalize": { "return": "FRotator" },
+        "GetInverse": { "return": "FRotator" },
+        "Lerp": { "params": ["target: FRotator", "alpha: number"], "return": "FRotator" }
+      }
+    },
+    "FRotationMatrix": {
+      "type": "struct",
+      "description": "Rotation matrix",
+      "constructors": ["new(rotator: FRotator)"],
+      "methods": {
+        "GetUnitAxis": { "params": ["axis: EAxis"], "return": "FVector" }
+      }
+    },
+    "FHitResult": {
+      "type": "struct",
+      "description": "Trace hit result information",
+      "properties": {
+        "bBlockingHit": { "type": "boolean" },
+        "Actor": { "type": "AActor" },
+        "Component": { "type": "UPrimitiveComponent" },
+        "Location": { "type": "FVector" },
+        "Normal": { "type": "FVector" },
+        "TraceStart": { "type": "FVector" },
+        "TraceEnd": { "type": "FVector" },
+        "Time": { "type": "number" }
+      }
+    },
+    "FLinearColor": {
+      "type": "struct",
+      "description": "RGBA color",
+      "constructors": [
+        "new(r: number, g: number, b: number, a: number)",
+        "Red", "Green", "Blue", "White", "Black", "Yellow"
+      ],
+      "properties": {
+        "R": { "type": "number" },
+        "G": { "type": "number" },
+        "B": { "type": "number" },
+        "A": { "type": "number" }
+      }
+    },
+    "FTimerHandle": {
+      "type": "struct",
+      "description": "Timer handle for delayed function calls"
+    },
+    "APlayerController:SetInputMode": {
+      "params": ["mode: FInputModeGameOnly | FInputModeUIOnly | FInputModeGameAndUI"],
+      "return": "void"
+    },
+    "APlayerController:SetShowMouseCursor": {
+      "params": ["bShowMouseCursor: boolean"],
+      "return": "void"
+    },
+    "UGameInstance": {
+      "type": "class",
+      "extends": "UObject",
+      "methods": {
+        "GetWorld": { "return": "UWorld" }
+      }
+    },
+    "UnLua": {
+      "type": "namespace",
+      "description": "UnLua specific utilities",
+      "methods": {
+        "GetField": { "params": ["object: UObject", "fieldName: string"], "return": "any" },
+        "SetField": { "params": ["object: UObject", "fieldName: string", "value: any"], "return": "void" },
+        "CallFunction": { "params": ["object: UObject", "functionName: string", "...: any"], "return": "any" }
+      }
+    }
+  }
+}

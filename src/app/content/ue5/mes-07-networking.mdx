@@ -1,0 +1,74 @@
+---
+title: "Mes 7: Multijugador y Replicación"
+duration: "4 semanas · ~60 horas"
+phase: "Fase III: Avanzado"
+objectives:
+  - "Comprender el modelo cliente-servidor de UE5 y su integración con Lua"
+  - "Implementar replicación de propiedades y RPCs (Remote Procedure Calls) desde Lua"
+  - "Crear sistemas multijugador básicos: sincronización de posición, estado, inventario"
+  - "Manejar predicción del lado del cliente y reconciliación desde scripts Lua"
+  - "Testear y depurar escenarios multijugador en local con múltiples instancias de UE5"
+deliverable: "Mini-juego online 2 jugadores: mecánica simple (p.ej. pong 3D o tag) con posición, puntuación y eventos sincronizados por red vía scripts Lua."
+---
+
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { CodeSnippet } from "@/components/ui/CodeSnippet"
+import { Server, Globe } from "lucide-react"
+
+# Introducción
+
+Entramos en la Fase III: Nivel Avanzado. El desarrollo multijugador es uno de los desafíos más grandes en videojuegos. Unreal Engine tiene un sistema de replicación robusto, y en este mes aprenderás a controlarlo desde Lua. Entenderás conceptos como "Authority", "Replication" y "RPCs" para crear experiencias compartidas.
+
+## Configuración del Entorno
+
+Para probar multijugador, necesitarás configurar tu editor para lanzar múltiples instancias.
+
+<CodeSnippet label="Configuración de Editor">
+Editor Preferences > Level Editor > Play > Multiplayer Options > Number of Players: 2
+</CodeSnippet>
+
+También es útil configurar el modo de red para simular latencia (lag) y ver cómo se comporta tu código Lua.
+
+<CodeSnippet label="Comando de Consola (Simular Lag)">
+Net PktLag=100
+</CodeSnippet>
+
+## Estructura Semanal
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-[100px]">Semana</TableHead>
+      <TableHead>Temario</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">Semana 1</TableCell>
+      <TableCell>Fundamentos de red UE5 — modelo C/S, authority, NetMode; acceso desde Lua</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 2</TableCell>
+      <TableCell>Replicación de propiedades — UPROPERTY Replicated en clases Lua-bound</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 3</TableCell>
+      <TableCell>RPCs en Lua — Server, Client, NetMulticast functions desde scripts</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className="font-medium">Semana 4</TableCell>
+      <TableCell>Mini-juego multijugador — 2 jugadores, sincronización de posición y puntuación</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Entregable del Mes
+
+<Alert className="mt-6 border-primary/50 bg-primary/10">
+  <Globe className="h-4 w-4" />
+  <AlertTitle>Mini-juego Online (2 Jugadores)</AlertTitle>
+  <AlertDescription>
+    Mecánica simple (p.ej. pong 3D o tag) con posición, puntuación y eventos sincronizados por red vía scripts Lua. Debe funcionar correctamente con latencia simulada.
+  </AlertDescription>
+</Alert>
