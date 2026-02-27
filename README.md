@@ -1,523 +1,261 @@
-# 🎯 Lua Master Pro
+# 🎮 Lua Master Pro - Plataforma de Aprendizaje Interactivo
 
-**Plataforma educativa interactiva para aprender Lua Scripting en Unreal Engine 5**
+![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-en%20desarrollo-yellow)
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.1.6-black?logo=next.js)](https://nextjs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org)
-[![React](https://img.shields.io/badge/React-19.2.3-61dafb?logo=react)](https://react.dev)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
-[![Supabase](https://img.shields.io/badge/Supabase-2.39.0-3ecf8e?logo=supabase)](https://supabase.com)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+Plataforma web completa para aprender **Lua Scripting en Unreal Engine 5.6** en 12 meses.
 
----
+## ✨ Características
 
-## 📖 Descripción
-
-**Lua Master Pro** es una plataforma educativa completa que te lleva desde cero hasta dominar Lua Scripting para Unreal Engine 5. Con **73 lecciones** distribuidas en **12 módulos** (~730 horas de contenido), la plataforma combina teoría, ejemplos de código, ejercicios interactivos y validación automática.
-
-### ✨ Características Principales
-
-- 📚 **73 Lecciones** estructuradas en 12 módulos progresivos
-- 💻 **Editor de Código Monaco** (mismo motor que VS Code)
-- 🏃 **Ejecución de Lua en el navegador** con lua.vm.js
-- ✅ **Validación automática** de ejercicios
-- 📊 **Tracking de progreso** con Supabase
-- 🎮 **Gamificación**: XP, medallas, leaderboards
-- 📝 **Quizzes y exámenes** por módulo
-- 🌙 **Dark mode** por defecto
-- 📱 **Responsive design** para móvil, tablet y desktop
-
----
-
-## 🏗️ Arquitectura del Proyecto
-
-### Stack Tecnológico
-
-| Capa | Tecnología | Versión |
-|------|-----------|---------|
-| **Framework** | Next.js 16 | App Router |
-| **Lenguaje** | TypeScript | 5.x |
-| **UI** | React 19 + Tailwind CSS 4 | - |
-| **Editor** | Monaco Editor | 0.55.1 |
-| **Backend** | Supabase | 2.39.0 |
-| **Auth** | NextAuth.js | 4.24.0 |
-| **Lua Runtime** | lua.vm.js | 0.0.1 |
-| **AI** | Anthropic SDK | 0.24.0 |
-
-### Estructura de Directorios
-
-```
-hub_central_proyect/
-├── src/
-│   ├── app/                    # Next.js App Router
-│   │   ├── (auth)/             # Rutas de autenticación
-│   │   ├── course/             # Páginas de curso
-│   │   │   └── [moduleId]/
-│   │   │       └── [lessonId]/
-│   │   ├── dashboard/          # Dashboard principal
-│   │   ├── editor/             # Editor de código
-│   │   ├── quiz/               # Sistema de quizzes
-│   │   ├── exams/              # Exámenes
-│   │   ├── analytics/          # Analytics de progreso
-│   │   ├── profile/            # Perfil de usuario
-│   │   └── api/                # API Routes
-│   ├── components/
-│   │   ├── LessonViewer.tsx    # Visualizador de teoría
-│   │   ├── InteractiveCode.tsx # Código ejecutable
-│   │   ├── LessonNavigation.tsx # Navegación
-│   │   └── ExerciseRunner.tsx  # Validación de ejercicios
-│   ├── lib/
-│   │   └── lessons/            # Contenido de lecciones
-│   │       ├── mes-01/         # Módulo 1: Lua desde Cero
-│   │       ├── mes-02/         # Módulo 2: POO + UE5
-│   │       └── ...             # 12 módulos totales
-│   ├── types/
-│   │   └── lesson.ts           # Interfaces TypeScript
-│   └── hooks/
-│       └── useAuth.ts          # Hook de autenticación
-├── public/                     # Assets estáticos
-├── supabase-schema.sql        # Schema de base de datos
-└── package.json               # Dependencias
-```
-
----
-
-## 📚 Plan de Estudio
-
-### Fase I - Fundamentos (Meses 1-3)
-
-| Módulo | Lecciones | Tema | Horas |
-|--------|-----------|------|-------|
-| **Mes 1** | 7 | Lua desde Cero | 60h |
-| **Mes 2** | 6 | POO + UE5 Basics | 60h |
-| **Mes 3** | 6 | Blueprints ↔ Lua | 60h |
-
-### Fase II - Integración (Meses 4-6)
-
-| Módulo | Lecciones | Tema | Horas |
-|--------|-----------|------|-------|
-| **Mes 4** | 6 | Inventario y Stats | 60h |
-| **Mes 5** | 6 | UI y Diálogos | 60h |
-| **Mes 6** | 6 | IA de NPCs | 60h |
-
-### Fase III - Avanzado (Meses 7-9)
-
-| Módulo | Lecciones | Tema | Horas |
-|--------|-----------|------|-------|
-| **Mes 7** | 6 | Multijugador | 60h |
-| **Mes 8** | 6 | Optimización | 60h |
-| **Mes 9** | 6 | Sistemas Avanzados | 60h |
-
-### Fase IV - Maestría (Meses 10-12)
-
-| Módulo | Lecciones | Tema | Horas |
-|--------|-----------|------|-------|
-| **Mes 10** | 6 | Arquitectura | 60h |
-| **Mes 11** | 6 | Producción | 60h |
-| **Mes 12** | 6 | Portfolio | 60h |
-
-**Total**: 73 lecciones | ~730 horas
-
----
+- 📚 **12 módulos progresivos** (730 horas de contenido)
+- 💻 **Editor Lua online** integrado con soporte de ejecución
+- 🤖 **Chat con IA** especializado en Lua y UE5
+- 📊 **Seguimiento de progreso** en tiempo real
+- 🎯 **Proyectos prácticos** con entregas tangibles
+- 🔐 **Autenticación segura** con registro/login
+- 💳 **Sistema de pago** con FreeTier y Premium
+- 📜 **Certificados** descargables al completar módulos
+- 🌙 **Dark Mode** optimizado para desarrollo
 
 ## 🚀 Quick Start
 
-### Prerrequisitos
+### Requirements
 
-- Node.js 18+ 
+- Node.js 18+
 - npm o yarn
-- Cuenta de Supabase (gratuita)
+- Git
 
-### Instalación
+### Install
 
 ```bash
-# Clonar el repositorio
-git clone https://github.com/TU_USUARIO/lua-master-pro.git
-cd lua-master-pro
+# Clonar repo
+git clone https://github.com/tu-usuario/lua-master-pro
+cd hub_central_proyect
 
 # Instalar dependencias
 npm install
 
-# Configurar variables de entorno
+# Copiar env
 cp .env.example .env.local
-# Editar .env.local con tus credenciales de Supabase
+
+# Editar .env.local con tus credenciales
+# (Ver DEPLOYMENT.md para detalles)
+
+# Dev server
+npm run dev
 ```
+
+Abre [http://localhost:3001](http://localhost:3001) ✨
+
+### Build para producción
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 📚 Contenido del Curso
+
+### Fase I: Fundamentos (Meses 1-3)
+
+| Módulo | Tema | Horas |
+|--------|------|-------|
+| Mes 1 | Lua desde Cero | 60h |
+| Mes 2 | POO + Primeros Pasos en UE5 | 60h |
+| Mes 3 | Blueprints ↔ Lua Communication | 60h |
+
+### Fase II: Integración (Meses 4-6)
+
+| Módulo | Tema | Horas |
+|--------|------|-------|
+| Mes 4 | Sistemas: Inventario y Stats | 60h |
+| Mes 5 | UI y Sistema de Diálogos | 60h |
+| Mes 6 | Inteligencia Artificial de NPCs | 60h |
+
+### Fase III: Avanzado (Meses 7-9)
+
+| Módulo | Tema | Horas |
+|--------|------|-------|
+| Mes 7 | Multijugador y Replicación | 60h |
+| Mes 8 | Optimización y Editor Tools | 60h |
+| Mes 9 | Procedural, Shaders, Audio | 60h |
+
+### Fase IV: Maestría (Meses 10-12)
+
+| Módulo | Tema | Horas |
+|--------|------|-------|
+| Mes 10 | Arquitectura y Design Patterns | 60h |
+| Mes 11 | Producción del Juego Final | 60h |
+| Mes 12 | Portfolio y Comunidad | 60h |
+
+---
+
+## 🛠️ Stack Tecnológico
+
+### Frontend
+
+- **Next.js 16.1.6** - React framework con App Router
+- **React 19.2.3** - UI library
+- **Tailwind CSS 4** - Utility-first CSS
+- **Monaco Editor** - Editor de código profesional
+- **TypeScript** - Type safety
+
+### Backend
+
+- **Next.js API Routes** - Serverless functions
+- **Middleware** - Auth, CORS
+
+### Servicios Externos
+
+- **Supabase** - PostgreSQL + Auth + Storage
+- **Anthropic Claude** - IA para chat en tiempo real
+- **Stripe** - Sistema de pagos (opcional)
+
+### Deployment
+
+- **Vercel** - Hosting optimizado para Next.js (gratuito)
+- **Railway/Render** - Servidor Lua execution (opcional)
+
+---
+
+## 📁 Estructura de Carpetas
+
+```
+hub_central_proyect/
+├── src/
+│   ├── app/
+│   │   ├── (auth)/              # Rutas de autenticación
+│   │   │   ├── login/
+│   │   │   └── register/
+│   │   ├── dashboard/           # Panel principal del estudiante
+│   │   ├── course/[moduleId]/   # Página de módulo individual
+│   │   ├── editor/              # Editor Lua online
+│   │   ├── chat/                # Chat con IA
+│   │   ├── profile/             # Perfil del usuario
+│   │   ├── api/                 # API endpoints
+│   │   ├── page.tsx             # Homepage
+│   │   ├── layout.tsx           # Layout global
+│   │   └── globals.css
+│   ├── components/              # Componentes reutilizables
+│   │   ├── Navbar.tsx
+│   │   ├── CodeEditor.tsx
+│   │   └── ModuleCard.tsx
+│   ├── lib/                     # Funciones utilitarias
+│   │   ├── constants.ts         # Datos del curso
+│   │   └── supabase.ts          # Cliente Supabase
+│   └── types/                   # TypeScript interfaces
+│       └── index.ts
+├── public/                      # Recursos estáticos
+├── .env.example                 # Variables de entorno
+├── package.json
+├── tsconfig.json
+└── DEPLOYMENT.md               # Guía de deployment
+```
+
+---
+
+## 🔧 Configuración Necesaria
 
 ### Variables de Entorno
 
+Crear `.env.local`:
+
 ```env
 # Supabase
-NEXT_PUBLIC_SUPABASE_URL=tu_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_anon_key
+NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
 
-# NextAuth
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=tu_secreto_generado
+# Claude IA
+ANTHROPIC_API_KEY=sk-ant-...
 
-# Anthropic (opcional, para features de IA)
-ANTHROPIC_API_KEY=tu_api_key
+# Stripe (opcional)
+NEXT_PUBLIC_STRIPE_KEY=pk_live_...
+STRIPE_SECRET_KEY=sk_live_...
+
+# Ejecutor Lua (opcional)
+LUA_SERVER_URL=https://lua-server.railway.app
 ```
 
-### Desarrollo
-
-```bash
-# Iniciar servidor de desarrollo
-npm run dev
-
-# Abrir http://localhost:3000
-```
-
-### Build de Producción
-
-```bash
-# Compilar para producción
-npm run build
-
-# Iniciar servidor de producción
-npm run start
-```
+Ver [DEPLOYMENT.md](./DEPLOYMENT.md) para setups detallados.
 
 ---
 
-## 🎯 Estructura de Cada Lección
+## 🎯 Roadmap
 
-Cada lección sigue una estructura consistente:
-
-```typescript
-interface Lesson {
-  id: string;              // ej: "mes-01-l01"
-  moduleId: string;        // ej: "mes-01"
-  lessonNumber: number;    // ej: 1
-  title: string;           // ej: "Introducción a Lua"
-  description: string;
-  theory: LessonTheory;    // Contenido teórico
-  examples: CodeSnippet[]; // 3-5 ejemplos de código
-  interactive: InteractiveExample; // Código ejecutable
-  miniExercise: MiniExercise; // Ejercicio con validación
-  summary: string;
-  resources: LessonResource[];
-  estimatedTime: number;   // minutos
-  difficulty: "beginner" | "intermediate" | "advanced" | "expert";
-}
-```
-
-### Ejemplo de Uso
-
-```typescript
-// Importar lección
-import { lesson01 } from "@/lib/lessons/mes-01";
-
-// Acceder a teoría
-console.log(lesson01.theory.title);
-
-// Ejecutar código interactivo
-console.log(lesson01.interactive.starterCode);
-
-// Validar ejercicio
-const passed = lesson01.miniExercise.tests.every(test => {
-  // lógica de validación
-});
-```
+- [x] Estructura base y landing page
+- [x] Sistema de autenticación
+- [ ] Integración Supabase
+- [ ] Editor Monaco mejorado
+- [ ] Chat con Claude IA
+- [ ] Seguimiento de progreso
+- [ ] Sistema de certificados
+- [ ] Pagos con Stripe
+- [ ] Deployment Vercel
+- [ ] Servidor Lua execution
+- [ ] Tests automatizados
+- [ ] Documentación API
 
 ---
 
-## 🧪 Testing
+## 📈 Pricing
 
-```bash
-# Ejecutar tests unitarios
-npm test
+### Plan Gratuito
 
-# Verificar tipos TypeScript
-npx tsc --noEmit
-```
+- ✅ Módulos 1-3 (Fundamentos)
+- ✅ Hasta 5 ejercicios/semana
+- ✅ Editor Lua básico
+- ✅ Chat IA limitado (100 msg/mes)
 
-### Cobertura de Tests
+### Plan Premium ($29.99/mes)
 
-- ✅ 31 tests unitarios para tipos de lecciones
-- ✅ Tests de estructura de lecciones
-- ✅ Tests de ejemplos y ejercicios
-
----
-
-## 📊 Estado del Proyecto
-
-### Contenido
-
-| Estado | Cantidad |
-|--------|----------|
-| Lecciones totales | 73 |
-| Módulos completados | 12/12 ✅ |
-| Teoría | ~30,000 palabras |
-| Ejemplos de código | ~250 |
-| Ejercicios | 73 |
-
-### Build
-
-| Métrica | Valor |
-|---------|-------|
-| Tiempo de compilación | ~24s |
-| Bundle size | ~2.5 MB |
-| Errores TypeScript | 0 |
-| Lecciones accesibles | 73/73 (100%) |
+- ✅ **Todos** los 12 módulos
+- ✅ Ejercicios ilimitados
+- ✅ Editor Lua avanzado
+- ✅ Chat IA sin límites
+- ✅ Mentoría grupal bi-semanal
+- ✅ Comunidad privada
+- ✅ Certificados profesionales
 
 ---
 
-## 🗄️ Base de Datos (Supabase)
+## 🤝 Contribuir
 
-### Tablas Principales
+Las contribuciones son bienvenidas. Por favor:
 
-```sql
--- user_lesson_progress
-CREATE TABLE user_lesson_progress (
-  user_id UUID REFERENCES auth.users(id),
-  lesson_id TEXT,
-  module_id TEXT,
-  completed BOOLEAN,
-  theory_read BOOLEAN,
-  examples_viewed INTEGER,
-  interactive_executed BOOLEAN,
-  exercise_completed BOOLEAN,
-  xp_earned INTEGER,
-  started_at TIMESTAMPTZ,
-  completed_at TIMESTAMPTZ,
-  PRIMARY KEY (user_id, lesson_id)
-);
-
--- user_quizzes
-CREATE TABLE user_quizzes (
-  id UUID PRIMARY KEY,
-  user_id UUID REFERENCES auth.users(id),
-  module_id TEXT,
-  score INTEGER,
-  completed_at TIMESTAMPTZ
-);
-
--- user_achievements
-CREATE TABLE user_achievements (
-  user_id UUID REFERENCES auth.users(id),
-  achievement_id TEXT,
-  unlocked_at TIMESTAMPTZ,
-  PRIMARY KEY (user_id, achievement_id)
-);
-```
-
-Ver `supabase-schema.sql` para el schema completo.
-
----
-
-## 🎨 Componentes Principales
-
-### LessonViewer.tsx
-
-Renderiza el contenido teórico de la lección:
-- Markdown rendering
-- Objetivos de aprendizaje
-- Navegación entre secciones
-
-### InteractiveCode.tsx
-
-Editor Monaco con ejecución de Lua:
-- Syntax highlighting
-- Ejecución en sandbox con lua.vm.js
-- Comparación de output esperado vs real
-
-### ExerciseRunner.tsx
-
-Validador de ejercicios:
-- Ejecuta tests automáticos
-- Muestra hints si falla
-- Otorga XP al completar
-
-### LessonNavigation.tsx
-
-Navegación entre lecciones:
-- Botones anterior/siguiente
-- Progreso del módulo
-- Indicador de completado
-
----
-
-## 🔧 Comandos Útiles
-
-```bash
-# Desarrollo
-npm run dev              # Iniciar servidor de desarrollo
-
-# Build
-npm run build            # Compilar para producción
-npm run start            # Iniciar servidor de producción
-
-# Testing
-npm test                 # Ejecutar tests unitarios
-npx tsc --noEmit         # Verificar tipos TypeScript
-
-# Linting
-npm run lint             # Ejecutar linter (si está configurado)
-```
-
----
-
-## 📱 Rutas de la Aplicación
-
-| Ruta | Descripción |
-|------|-------------|
-| `/` | Landing page |
-| `/dashboard` | Dashboard principal |
-| `/course/[moduleId]` | Vista de módulo |
-| `/course/[moduleId]/[lessonId]` | Lección individual |
-| `/editor` | Editor de código |
-| `/quiz` | Sistema de quizzes |
-| `/quiz/[moduleId]` | Quiz por módulo |
-| `/exams` | Exámenes ficticios |
-| `/analytics` | Analytics de progreso |
-| `/profile` | Perfil de usuario |
-| `/leaderboard` | Tabla de líderes |
-| `/certificates` | Certificados |
-
----
-
-## 🔐 Autenticación
-
-La autenticación está manejada por **NextAuth.js** con **Supabase Auth**:
-
-- ✅ Registro con email/password
-- ✅ Login seguro
-- ✅ Sesiones persistentes
-- ✅ Protección de rutas
-- ✅ Reset de contraseña
-
----
-
-## 🎮 Gamificación
-
-### Sistema de XP
-
-| Acción | XP |
-|--------|-----|
-| Completar lección | 100 XP |
-| Ejercicio perfecto | +50 XP bonus |
-| Quiz completado | 200 XP |
-| Examen aprobado | 500 XP |
-| Racha de 7 días | 100 XP bonus |
-
-### Medallas
-
-- 🥇 **Primeros Pasos** - Completar primera lección
-- 📚 **Estudiante Dedicado** - 10 horas de estudio
-- 🏆 **Maestro de Lua** - Completar todos los módulos
-- ⚡ **Racha de Fuego** - 7 días consecutivos
-- 💯 **Perfeccionista** - Todos los ejercicios perfectos
-
----
-
-## 🌐 Deployment
-
-### Vercel (Recomendado)
-
-```bash
-# Instalar Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
-
-### Pasos para Deploy en Vercel
-
-1. Conectar repositorio de GitHub
-2. Agregar variables de entorno
-3. Deploy automático en cada push
-
-### Variables de Entorno para Producción
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=xxx
-NEXTAUTH_URL=https://tu-dominio.vercel.app
-NEXTAUTH_SECRET=xxx
-```
-
----
-
-## 🤝 Contribuyendo
-
-Las contribuciones son bienvenidas! Por favor:
-
-1. Fork el repositorio
-2. Crea una rama (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
+1. Fork el repo
+2. Crea una rama: `git checkout -b feature/mi-feature`
+3. Commits descriptivos: `git commit -m "feat: agrego nueva característica"`
+4. Push: `git push origin feature/mi-feature`
 5. Abre un Pull Request
 
-Ver [CONTRIBUTING.md](.github/CONTRIBUTING.md) para más detalles.
+---
+
+## 📝 License
+
+MIT © 2024 Lua Master Pro
 
 ---
 
-## 📄 Licencia
+## 🆘 Soporte
 
-Este proyecto está bajo la Licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
+¿Preguntas o problemas?
 
----
-
-## 👥 Contacto
-
-- **Sitio Web**: [tu-sitio-web.com](https://tu-sitio-web.com)
-- **Twitter**: [@tu_usuario](https://twitter.com/tu_usuario)
-- **LinkedIn**: [tu-perfil](https://linkedin.com/in/tu-perfil)
-- **Email**: tu@email.com
+- 📧 Email: support@luamasterpro.com
+- 💬 Discord: [Comunidad](https://discord.gg/luamasterpro)
+- 🐛 Issues: [GitHub Issues](https://github.com/tu-usuario/lua-master-pro/issues)
 
 ---
 
 ## 🙏 Agradecimientos
 
-- [Next.js](https://nextjs.org) - Framework React
-- [Supabase](https://supabase.com) - Backend como servicio
-- [Monaco Editor](https://microsoft.github.io/monaco-editor/) - Editor de código
-- [lua.vm.js](https://github.com/jamesreggio/lua.vm.js) - Runtime de Lua en JS
-- [Tailwind CSS](https://tailwindcss.com) - Framework de CSS
-- [Anthropic](https://anthropic.com) - API de IA
+- Lua.org por el excelente lenguaje
+- Epic Games por Unreal Engine
+- Vercel por el hosting gratuito
+- La comunidad de desarrolladores
 
 ---
 
-## 📈 Roadmap
-
-### Q1 2026
-- [ ] Integración completa con Supabase
-- [ ] Sistema de certificados PDF
-- [ ] Leaderboard global
-- [ ] Modo offline (PWA)
-
-### Q2 2026
-- [ ] App móvil (React Native)
-- [ ] Integración con GitHub para portfolios
-- [ ] Sistema de mentores
-- [ ] Contenido en inglés
-
-### Q3 2026
-- [ ] Comunidad y foros
-- [ ] Webinars en vivo
-- [ ] Certificación oficial
-- [ ] Partnerships con estudios
-
----
-
-## 📊 Métricas de Rendimiento
-
-| Métrica | Valor | Objetivo |
-|---------|-------|----------|
-| First Contentful Paint | < 1.5s | ✅ |
-| Largest Contentful Paint | < 2.5s | ✅ |
-| Time to Interactive | < 3.0s | ✅ |
-| Lighthouse Score | 90+ | ✅ |
-
----
-
-**Hecho con ❤️ usando Next.js, TypeScript y Tailwind CSS**
-
----
-
-*Última actualización: Febrero 2026*
-*Versión: 1.0.0*
-#   l u a - m a s t e r - p r o  
- #   l u a - m a s t e r - p r o  
- 
+**Hecho con ❤️ para desarrolladores que quieren dominar Lua en UE5**
