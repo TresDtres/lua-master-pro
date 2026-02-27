@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +40,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Qwen Code (local config)
+.qwen/
+
+# Build logs (local only)
+build-*.txt
+build.log
+*.bak
+
+# Workspace files
+*.code-workspace
+
+# Internal documentation (optional - keep for project history)
+# Uncomment to ignore:
+# 100_COMPLETADO.md
+# BUILD_EXITOSO_95.md
+# CAMBIOS_DETALLADOS.md
+# ESTADO_*.md
+# PROYECTO_*.md
+# TODO*.md
+# *_COMPLETADO.md
