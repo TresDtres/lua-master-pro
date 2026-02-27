@@ -187,16 +187,16 @@ Ver [DEPLOYMENT.md](./DEPLOYMENT.md) para setups detallados.
 
 - [x] Estructura base y landing page
 - [x] Sistema de autenticación
-- [ ] Integración Supabase
-- [ ] Editor Monaco mejorado
-- [ ] Chat con Claude IA
-- [ ] Seguimiento de progreso
-- [ ] Sistema de certificados
-- [ ] Pagos con Stripe
-- [ ] Deployment Vercel
-- [ ] Servidor Lua execution
-- [ ] Tests automatizados
-- [ ] Documentación API
+- [x] Integración Supabase
+- [x] Editor Monaco mejorado
+- [x] Chat con Claude IA
+- [x] Seguimiento de progreso
+- [x] Sistema de certificados
+- [x] Pagos con Stripe
+- [x] Deployment Vercel
+- [x] Servidor Lua execution
+- [x] Tests automatizados
+- [x] Documentación API
 
 ---
 
@@ -235,7 +235,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 ## 📝 License
 
-MIT © 2024 Lua Master Pro
+MIT © 2026 Tresdtres
 
 ---
 
@@ -243,9 +243,9 @@ MIT © 2024 Lua Master Pro
 
 ¿Preguntas o problemas?
 
-- 📧 Email: support@luamasterpro.com
-- 💬 Discord: [Comunidad](https://discord.gg/luamasterpro)
-- 🐛 Issues: [GitHub Issues](https://github.com/tu-usuario/lua-master-pro/issues)
+- 📧 Email: gurublau@gmail.com.com
+- 💬 Discord: [Comunidad](https://discord.gg/85Y9rwP8et)
+- 🐛 Issues: [GitHub Issues](https://github.com/TresDtres/lua-master-pro/issues)
 
 ---
 
